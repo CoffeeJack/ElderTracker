@@ -1,0 +1,16 @@
+<?php
+
+class WoTKDataRetriever extends URLDataRetriever
+{
+	protected $DEFAULT_PARSER_CLASS = 'JSONDataParser';
+	private $key_id = "9c4389eae0f94004";
+	private $key_password = "af092d74889edf2c";
+
+	public function getLocationData(){
+
+		$this->setBaseUrl("http://wotkit.sensentecnic.com/api/sensors/coffeejack.locationprobe_cce1d58557e202ec/data");
+		$data = $this->getData();
+		return $data;
+	}
+ 
+}

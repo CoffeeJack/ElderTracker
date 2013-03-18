@@ -1,0 +1,13 @@
+<strong>Unable to find feedgroups-default config file for module hello</strong><br><br><strong>Fatal error</strong>:  Uncaught exception 'KurogoConfigurationException' with message 'Unable to find feedgroups-default config file for module hello' in C:\xampp\htdocs\Kurogo\lib\Config\ModuleConfigFile.php:74
+Stack trace:
+#0 C:\xampp\htdocs\Kurogo\lib\Config\ConfigFile.php(151): getFileByType(string, string)
+#1 C:\xampp\htdocs\Kurogo\lib\Config\ConfigFile.php(219): createDefaultFile(string, string)
+#2 C:\xampp\htdocs\Kurogo\lib\Config\ModuleConfigFile.php(36): loadFileType(string, string, integer)
+#3 C:\xampp\htdocs\Kurogo\lib\Module.php(321): factory(string, string, integer, object)
+#4 C:\xampp\htdocs\Kurogo\lib\Module.php(455): getConfig(string, integer)
+#5 C:\xampp\htdocs\Kurogo\app\modules\map\MapWebModule.php(32): getModuleSections(string)
+#6 C:\xampp\htdocs\Kurogo\app\modules\map\MapWebModule.php(736): getFeedGroups()
+#7 C:\xampp\htdocs\Kurogo\lib\WebModule.php(562): initialize()
+#8 C:\xampp\htdocs\Kurogo\www\index.php(304): factory(string, string, array)
+#9 {main}
+  thrown in <strong>C:\xampp\htdocs\Kurogo\lib\Config\ModuleConfigFile.php</strong> on line <strong>74</strong>

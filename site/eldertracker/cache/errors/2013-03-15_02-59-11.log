@@ -1,0 +1,9 @@
+<strong>Unable to load template file 'modules/home/templates/other'</strong><br><br><strong>Fatal error</strong>:  Uncaught exception 'SmartyException' with message 'Unable to load template file 'modules/home/templates/other'' in C:\xampp\htdocs\Kurogo\lib\smarty\sysplugins\smarty_internal_template.php:163
+Stack trace:
+#0 C:\xampp\htdocs\Kurogo\lib\smarty\sysplugins\smarty_internal_template.php(550): isExisting(boolean)
+#1 C:\xampp\htdocs\Kurogo\lib\smarty\Smarty.class.php(336): getRenderedTemplate()
+#2 C:\xampp\htdocs\Kurogo\lib\TemplateEngine.php(433): fetch(string, NULL, NULL)
+#3 C:\xampp\htdocs\Kurogo\lib\WebModule.php(1878): fetchForDevice(string)
+#4 C:\xampp\htdocs\Kurogo\www\index.php(306): displayPage()
+#5 {main}
+  thrown in <strong>C:\xampp\htdocs\Kurogo\lib\smarty\sysplugins\smarty_internal_template.php</strong> on line <strong>163</strong>

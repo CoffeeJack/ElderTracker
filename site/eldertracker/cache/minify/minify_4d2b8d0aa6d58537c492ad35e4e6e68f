@@ -1,0 +1,216 @@
+/* Adding url prefix '/device/compliant-computer-unknown/' */
+
+/* Minify_CSS_UriRewriter::$debugText
+
+docRoot    : C:\xampp\htdocs\Kurogo\www
+currentDir : C:\xampp\htdocs\Kurogo\site\eldertracker\themes\hi-def\modules\info\css
+symlinks : array (
+  'C:\\xampp\\htdocs\\Kurogo\\www' => 'C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\themes\\hi-def',
+)
+
+*/
+
+/* common.css */
+
+/* 1   */ @charset "UTF-8";
+/* 2   */ /* CSS Document */
+/* 3   */ 
+/* 4   */ body {
+/* 5   */ 	margin: 0 20px;
+/* 6   */ 	background: #DCDDDF;
+/* 7   */ 	font-family: Arial, Helvetica, sans-serif;
+/* 8   */ 	font-size: 12px;
+/* 9   */ 	line-height: 1.4;
+/* 10  */ 	color: #333;
+/* 11  */ }
+/* 12  */ 
+/* 13  */ img {
+/* 14  */ 	border: 0;
+/* 15  */ }
+/* 16  */ 
+/* 17  */ a, a:visited {
+/* 18  */ 	color: #036;
+/* 19  */ }
+/* 20  */ 
+/* 21  */ p {
+/* 22  */ 	padding: 0;
+/* 23  */ 	margin: 0 0 15px;
+/* 24  */ }
+/* 25  */ 
+/* 26  */ #container {
+/* 27  */ 	width: 1000px;
+/* 28  */ 	margin: 0 auto;
+/* 29  */ }
+/* 30  */ 
+/* 31  */ #header {
+/* 32  */ 	height: 304px;
+/* 33  */ 	overflow: hidden;
+/* 34  */ 	background: url("/device/compliant-computer-unknown/modules/info/images/phone_images.png") no-repeat 570px bottom;
+/* 35  */ }
+/* 36  */ 
+/* 37  */ #utility_nav {
+/* 38  */ 	height: 20px;
+/* 39  */ 	text-align: right;
+/* 40  */ 	padding: 9px 30px 0 0;
+/* 41  */ 	font-size: 11px;
+/* 42  */ 	vertical-align: top;
+/* 43  */ }
+/* 44  */ 
+/* 45  */ #utility_nav a, #utility_nav a:visited {
+/* 46  */ 	color: #444;
+/* 47  */ 	text-decoration: none;
+/* 48  */ }
+/* 49  */ 
+/* 50  */ #utility_nav a:hover {
+
+/* common.css */
+
+/* 51  */ 	text-decoration: underline;
+/* 52  */ }
+/* 53  */ 
+/* 54  */ #logo {
+/* 55  */   margin-top: -10px;
+/* 56  */ }
+/* 57  */ 
+/* 58  */ #header h1 {
+/* 59  */ 	padding: 30px 0 0 64px;
+/* 60  */ 	font-size: 36px;
+/* 61  */ 	width: 300px;
+/* 62  */ 	margin: 0;
+/* 63  */ 	line-height: 1;
+/* 64  */ }
+/* 65  */ 
+/* 66  */ #header p {
+/* 67  */ 	margin:12px 0 0 164px;
+/* 68  */ 	width: 300px;
+/* 69  */ 	font-size: 16px;
+/* 70  */ 	line-height: 1.2;
+/* 71  */ }
+/* 72  */ 
+/* 73  */ #content {
+/* 74  */ 	min-height: 400px;
+/* 75  */ 	background-color: #fff;
+/* 76  */ 	padding: 35px 40px 25px;
+/* 77  */ 	border: solid 2px #BCBCBC;
+/* 78  */ }
+/* 79  */ 
+/* 80  */ .leftcol {
+/* 81  */ 	width: 400px;
+/* 82  */ 	float: left;
+/* 83  */ }
+/* 84  */ 
+/* 85  */ .rightcol {
+/* 86  */ 	width: 410px;
+/* 87  */ 	float: right;
+/* 88  */ 	padding-left: 40px;
+/* 89  */ 	border-left: solid 2px #bcbcbc;
+/* 90  */ }
+/* 91  */ 
+/* 92  */ #content h2 {
+/* 93  */   color: #036;
+/* 94  */   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/* 95  */   font-size: 21px;
+/* 96  */   font-weight: normal;
+/* 97  */   line-height: 1.2;
+/* 98  */ 	margin: 0 0 10px;
+/* 99  */ 	padding: 0;
+/* 100 */ }
+
+/* common.css */
+
+/* 101 */ 
+/* 102 */ a#feedback, a#feedback:visited {
+/* 103 */   text-decoration: none !important;
+/* 104 */   background-color: #003366;
+/* 105 */   border-bottom-left-radius: 8px 8px;
+/* 106 */   border-bottom-left-radius: 8px 8px;
+/* 107 */   border-bottom-right-radius: 8px 8px;
+/* 108 */   border-bottom-right-radius: 8px 8px;
+/* 109 */   border-top-left-radius: 8px 8px;
+/* 110 */   border-top-left-radius: 8px 8px;
+/* 111 */   border-top-right-radius: 8px 8px;
+/* 112 */   border-top-right-radius: 8px 8px;
+/* 113 */   color: white;
+/* 114 */   display: inline-block;
+/* 115 */ 	padding: 12px;
+/* 116 */ 	margin-top: 24px;
+/* 117 */ }
+/* 118 */ a#feedback:hover {
+/* 119 */ 	background-color: #002244;
+/* 120 */ }
+/* 121 */ a#feedback strong {
+/* 122 */ 	font-size: 16px;
+/* 123 */ }
+/* 124 */ a#feedback .address {
+/* 125 */   text-decoration: underline;
+/* 126 */ }
+/* 127 */ 
+/* 128 */ table#download {
+/* 129 */ 	font-size: 14px;
+/* 130 */ }
+/* 131 */ 
+/* 132 */ table#download td {
+/* 133 */ 	padding: 0 12px 12px 0;
+/* 134 */ }
+/* 135 */ 
+/* 136 */ table#features td {
+/* 137 */ 	vertical-align: top;
+/* 138 */ 	padding: 0 20px 10px 0;
+/* 139 */ }
+/* 140 */ 
+/* 141 */ table#features td h2 {
+/* 142 */ 	font-family: Arial, Helvetica, sans-serif;
+/* 143 */ 	color: #000;
+/* 144 */ 	font-weight: bold;
+/* 145 */ 	font-size: 12px;
+/* 146 */ 	line-height: 1.2;
+/* 147 */ 	margin: 0;
+/* 148 */ }
+/* 149 */ 
+/* 150 */ .clr {
+
+/* common.css */
+
+/* 151 */ 	clear: both;
+/* 152 */ }
+/* 153 */ 
+/* 154 */ #footer {
+/* 155 */ 	font-size: 11px;
+/* 156 */ 	padding: 5px 0 15px;
+/* 157 */ 	color: #666;
+/* 158 */ }
+/* 159 */ 
+/* 160 */ #footer a, #footer a:visited {
+/* 161 */ 	color: #666;
+/* 162 */ 	text-decoration: none;
+/* 163 */ }
+/* 164 */ 
+/* 165 */ #footer a:hover {
+/* 166 */ 	text-decoration: underline;
+/* 167 */ }
+/* 168 */ 
+/* 169 */ a#preview, a#preview:visited {
+/* 170 */   background-color: #003366;
+/* 171 */   border-bottom-left-radius: 8px 8px;
+/* 172 */   border-bottom-left-radius: 8px 8px;
+/* 173 */   border-bottom-right-radius: 8px 8px;
+/* 174 */   border-bottom-right-radius: 8px 8px;
+/* 175 */   border-top-left-radius: 8px 8px;
+/* 176 */   border-top-left-radius: 8px 8px;
+/* 177 */   border-top-right-radius: 8px 8px;
+/* 178 */   border-top-right-radius: 8px 8px;
+/* 179 */   color: white;
+/* 180 */   display: inline-block;
+/* 181 */   line-height: 18px;
+/* 182 */   padding: 11px;
+/* 183 */   margin-bottom: 24px;
+/* 184 */   text-decoration: none !important;
+/* 185 */ }
+/* 186 */ 
+/* 187 */ a#preview:hover {
+/* 188 */ 	background-color: #002244;
+/* 189 */ }
+
+/* id::themeConfigModTimeChecker */
+
+/* 1 */ 

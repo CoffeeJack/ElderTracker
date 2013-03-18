@@ -1,0 +1,6 @@
+<strong>Module getdata not found</strong><br><br><strong>Fatal error</strong>:  Uncaught exception 'KurogoModuleNotFound' with message 'Module getdata not found' in C:\xampp\htdocs\Kurogo\lib\Module.php:110
+Stack trace:
+#0 C:\xampp\htdocs\Kurogo\lib\WebModule.php(555): factory(string, string)
+#1 C:\xampp\htdocs\Kurogo\www\index.php(304): factory(string, string, array)
+#2 {main}
+  thrown in <strong>C:\xampp\htdocs\Kurogo\lib\Module.php</strong> on line <strong>110</strong>

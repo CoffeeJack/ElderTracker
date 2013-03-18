@@ -1,0 +1,617 @@
+[Thu 03 14 21:24:54 2013]	deviceDetection:Warning	DeviceClassifier->detectDeviceExternal@421	/	Error receiving device detection data from https://modolabs-device.appspot.com/api/?user-agent=Mozilla%2F5.0+%28Windows+NT+6.1%3B+WOW64%29+AppleWebKit%2F537.22+%28KHTML%2C+like+Gecko%29+Chrome%2F25.0.1364.172+Safari%2F537.22&version=2.  Reading expired cache.
+[Thu 03 14 21:24:55 2013]	kurogo:Warning	_404@100	/common/images/search-button.png	URL /common/images/search-button.png not found
+[Thu 03 14 21:24:55 2013]	kurogo:Warning	_404@100	/modules/home/images/people.png	URL /modules/home/images/people.png not found
+[Thu 03 14 21:24:55 2013]	kurogo:Warning	_404@100	/modules/home/images/calendar.png	URL /modules/home/images/calendar.png not found
+[Thu 03 14 21:24:55 2013]	kurogo:Warning	_404@100	/modules/home/images/news.png	URL /modules/home/images/news.png not found
+[Thu 03 14 21:24:55 2013]	kurogo:Warning	_404@100	/modules/home/images/social.png	URL /modules/home/images/social.png not found
+[Thu 03 14 21:24:55 2013]	kurogo:Warning	_404@100	/modules/home/images/map.png	URL /modules/home/images/map.png not found
+[Thu 03 14 21:24:56 2013]	kurogo:Warning	_404@100	/modules/home/images/athletics.png	URL /modules/home/images/athletics.png not found
+[Thu 03 14 21:24:56 2013]	kurogo:Warning	_404@100	/modules/home/images/video.png	URL /modules/home/images/video.png not found
+[Thu 03 14 21:24:56 2013]	kurogo:Warning	_404@100	/modules/home/images/photos.png	URL /modules/home/images/photos.png not found
+[Thu 03 14 21:24:56 2013]	kurogo:Warning	_404@100	/modules/home/images/kitchensink.png	URL /modules/home/images/kitchensink.png not found
+[Thu 03 14 21:24:56 2013]	kurogo:Warning	_404@100	/modules/home/images/admissions.png	URL /modules/home/images/admissions.png not found
+[Thu 03 14 21:24:56 2013]	kurogo:Warning	_404@100	/modules/home/images/links.png	URL /modules/home/images/links.png not found
+[Thu 03 14 21:24:56 2013]	kurogo:Warning	_404@100	/modules/home/images/emergency.png	URL /modules/home/images/emergency.png not found
+[Thu 03 14 21:24:56 2013]	kurogo:Warning	_404@100	/modules/home/images/fullweb.png	URL /modules/home/images/fullweb.png not found
+[Thu 03 14 21:24:56 2013]	kurogo:Warning	_404@100	/modules/home/images/about.png	URL /modules/home/images/about.png not found
+[Thu 03 14 21:24:56 2013]	kurogo:Warning	_404@100	/modules/home/images/customize.png	URL /modules/home/images/customize.png not found
+[Thu 03 14 21:25:01 2013]	exception:Critical	PeopleController::factory@105	/people/	A KurogoConfigurationException has occured: Controller class  not defined
+[Thu 03 14 21:25:05 2013]	kurogo:Warning	_404@100	/device/unknown-unknown-unknown/common/images/navback.png	URL /device/unknown-unknown-unknown/common/images/navback.png not found
+[Thu 03 14 21:25:05 2013]	kurogo:Warning	_404@100	/device/unknown-unknown-unknown/common/images/loading.gif	URL /device/unknown-unknown-unknown/common/images/loading.gif not found
+[Thu 03 14 21:25:05 2013]	kurogo:Warning	_404@100	/common/images/search-button.png	URL /common/images/search-button.png not found
+[Thu 03 14 21:25:05 2013]	kurogo:Warning	_404@100	/common/images/homelink.png	URL /common/images/homelink.png not found
+[Thu 03 14 21:25:32 2013]	kurogo:Warning	_404@100	/common/images/title-admin.png	URL /common/images/title-admin.png not found
+[Thu 03 14 21:25:32 2013]	kurogo:Warning	_404@100	/device/unknown-unknown-unknown/common/images/navback.png	URL /device/unknown-unknown-unknown/common/images/navback.png not found
+[Thu 03 14 21:25:32 2013]	deviceDetection:Warning	DeviceClassifier->detectDeviceExternal@421	/rest/admin/getlocalizedstring?v=1&key%5B%5D=BUTTON_ADD&key%5B%5D=BUTTON_EDIT&key%5B%5D=BUTTON_DONE&key%5B%5D=BUTTON_REMOVE&key%5B%5D=CONFIG_SAVED&key%5B%5D=ACTION_RUNNING&key%5B%5D=ACTION_SUCCESSFUL&key%5B%5D=ADMIN_SECTION_REMOVE_PROMPT&key%5B%5D=ADMIN_SECTION_ADD_PROMPT	Error receiving device detection data from https://modolabs-device.appspot.com/api/?user-agent=Mozilla%2F5.0+%28Windows+NT+6.1%3B+WOW64%29+AppleWebKit%2F537.22+%28KHTML%2C+like+Gecko%29+Chrome%2F25.0.1364.172+Safari%2F537.22&version=2.  Reading expired cache.
+[Thu 03 14 21:25:32 2013]	kurogo:Warning	_404@100	/common/images/homelink.png	URL /common/images/homelink.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/social.png	URL /modules/home/images/social.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/calendar.png	URL /modules/home/images/calendar.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/people.png	URL /modules/home/images/people.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/news.png	URL /modules/home/images/news.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/common/images/search-button.png	URL /common/images/search-button.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/athletics.png	URL /modules/home/images/athletics.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/video.png	URL /modules/home/images/video.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/photos.png	URL /modules/home/images/photos.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/map.png	URL /modules/home/images/map.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/kitchensink.png	URL /modules/home/images/kitchensink.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/admissions.png	URL /modules/home/images/admissions.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/links.png	URL /modules/home/images/links.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/fullweb.png	URL /modules/home/images/fullweb.png not found
+nd
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/customize.png	URL /modules/home/images/customize.png not found
+[Thu 03 14 21:25:39 2013]	kurogo:Warning	_404@100	/modules/home/images/about.png	URL /modules/home/images/about.png not found
+[Thu 03 14 21:30:37 2013]	deviceDetection:Warning	DeviceClassifier->detectDeviceExternal@421	/modules/home/	Error receiving device detection data from https://modolabs-device.appspot.com/api/?user-agent=Mozilla%2F5.0+%28Windows+NT+6.1%3B+WOW64%29+AppleWebKit%2F537.22+%28KHTML%2C+like+Gecko%29+Chrome%2F25.0.1364.172+Safari%2F537.22&version=2.  Reading expired cache.
+[Thu 03 14 21:30:37 2013]	module:Error	Module::factory@109	/modules/home/	Module config file not found for module modules
+[Thu 03 14 21:30:37 2013]	exception:Critical	Module::factory@110	/modules/home/	A KurogoModuleNotFound has occured: Module modules not found
+[Thu 03 14 21:32:39 2013]	deviceDetection:Warning	DeviceClassifier->detectDeviceExternal@421	/home/	Error receiving device detection data from https://modolabs-device.appspot.com/api/?user-agent=Mozilla%2F5.0+%28Windows+NT+6.1%3B+WOW64%29+AppleWebKit%2F537.22+%28KHTML%2C+like+Gecko%29+Chrome%2F25.0.1364.172+Safari%2F537.22&version=2.  Reading expired cache.
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/people.png	URL /modules/home/images/people.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/common/images/search-button.png	URL /common/images/search-button.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/news.png	URL /modules/home/images/news.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/calendar.png	URL /modules/home/images/calendar.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/photos.png	URL /modules/home/images/photos.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/map.png	URL /modules/home/images/map.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/video.png	URL /modules/home/images/video.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/social.png	URL /modules/home/images/social.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/emergency.png	URL /modules/home/images/emergency.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/kitchensink.png	URL /modules/home/images/kitchensink.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/athletics.png	URL /modules/home/images/athletics.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/fullweb.png	URL /modules/home/images/fullweb.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/admissions.png	URL /modules/home/images/admissions.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/links.png	URL /modules/home/images/links.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/customize.png	URL /modules/home/images/customize.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/about.png	URL /modules/home/images/about.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/modules/home/images/people.png	URL /modules/home/images/people.png not found
+[Thu 03 14 21:32:39 2013]	kurogo:Warning	_404@100	/common/images/search-button.png	URL /common/images/search-button.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/common/images/search-button.png	URL /common/images/search-button.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/people.png	URL /modules/home/images/people.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/news.png	URL /modules/home/images/news.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/calendar.png	URL /modules/home/images/calendar.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/social.png	URL /modules/home/images/social.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/athletics.png	URL /modules/home/images/athletics.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/video.png	URL /modules/home/images/video.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/photos.png	URL /modules/home/images/photos.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/map.png	URL /modules/home/images/map.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/emergency.png	URL /modules/home/images/emergency.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/admissions.png	URL /modules/home/images/admissions.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/links.png	URL /modules/home/images/links.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/kitchensink.png	URL /modules/home/images/kitchensink.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/fullweb.png	URL /modules/home/images/fullweb.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/about.png	URL /modules/home/images/about.png not found
+[Thu 03 14 21:32:51 2013]	kurogo:Warning	_404@100	/modules/home/images/customize.png	URL /modules/home/images/customize.png not found
+[Thu 03 14 21:35:57 2013]	deviceDetection:Warning	DeviceClassifier->detectDeviceExternal@421	/home/	Error receiving device detection data from https://modolabs-device.appspot.com/api/?user-agent=Mozilla%2F5.0+%28Windows+NT+6.1%3B+WOW64%29+AppleWebKit%2F537.22+%28KHTML%2C+like+Gecko%29+Chrome%2F25.0.1364.172+Safari%2F537.22&version=2.  Reading expired cache.
+[Thu 03 14 21:35:57 2013]	kurogo:Warning	_404@100	/common/images/search-button.png	URL /common/images/search-button.png not found
+[Thu 03 14 21:35:57 2013]	kurogo:Warning	_404@100	/modules/home/images/athletics.png	URL /modules/home/images/athletics.png not found
+[Thu 03 14 21:35:57 2013]	kurogo:Warning	_404@100	/modules/home/images/calendar.png	URL /modules/home/images/calendar.png not found
+[Thu 03 14 21:35:57 2013]	kurogo:Warning	_404@100	/modules/home/images/news.png	URL /modules/home/images/news.png not found
+[Thu 03 14 21:35:57 2013]	kurogo:Warning	_404@100	/modules/home/images/social.png	URL /modules/home/images/social.png not found
+[Thu 03 14 21:35:57 2013]	kurogo:Warning	_404@100	/modules/home/images/people.png	URL /modules/home/images/people.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/map.png	URL /modules/home/images/map.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/video.png	URL /modules/home/images/video.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/admissions.png	URL /modules/home/images/admissions.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/emergency.png	URL /modules/home/images/emergency.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/links.png	URL /modules/home/images/links.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/photos.png	URL /modules/home/images/photos.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/customize.png	URL /modules/home/images/customize.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/fullweb.png	URL /modules/home/images/fullweb.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/common/images/search-button.png	URL /common/images/search-button.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/about.png	URL /modules/home/images/about.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/people.png	URL /modules/home/images/people.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/news.png	URL /modules/home/images/news.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/kitchensink.png	URL /modules/home/images/kitchensink.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/athletics.png	URL /modules/home/images/athletics.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/social.png	URL /modules/home/images/social.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/calendar.png	URL /modules/home/images/calendar.png not found
+[Thu 03 14 21:35:58 2013]	kurogo:Warning	_404@100	/modules/home/images/map.png	URL /modules/home/images/map.png not found
+[Thu 03 14 21:38:16 2013]	deviceDetection:Warning	DeviceClassifier->detectDeviceExternal@421	/admin	Error receiving device detection data from https://modolabs-device.appspot.com/api/?user-agent=Mozilla%2F5.0+%28Windows+NT+6.1%3B+WOW64%29+AppleWebKit%2F537.22+%28KHTML%2C+like+Gecko%29+Chrome%2F25.0.1364.172+Safari%2F537.22&version=2.  Reading expired cache.
+[Thu 03 14 21:38:16 2013]	kurogo:Warning	_404@100	/common/images/title-admin.png	URL /common/images/title-admin.png not found
+[Thu 03 14 21:38:16 2013]	kurogo:Warning	_404@100	/common/images/homelink.png	URL /common/images/homelink.png not found
+[Thu 03 14 21:38:16 2013]	kurogo:Warning	_404@100	/device/unknown-unknown-unknown/common/images/navback.png	URL /device/unknown-unknown-unknown/common/images/navback.png not found
+[Thu 03 14 21:38:16 2013]	deviceDetection:Warning	DeviceClassifier->detectDeviceExternal@421	/rest/admin/getlocalizedstring?v=1&key%5B%5D=BUTTON_ADD&key%5B%5D=BUTTON_EDIT&key%5B%5D=BUTTON_DONE&key%5B%5D=BUTTON_REMOVE&key%5B%5D=CONFIG_SAVED&key%5B%5D=ACTION_RUNNING&key%5B%5D=ACTION_SUCCESSFUL&key%5B%5D=ADMIN_SECTION_REMOVE_PROMPT&key%5B%5D=ADMIN_SECTION_ADD_PROMPT	Error receiving device detection data from https://modolabs-device.appspot.com/api/?user-agent=Mozilla%2F5.0+%28Windows+NT+6.1%3B+WOW64%29+AppleWebKit%2F537.22+%28KHTML%2C+like+Gecko%29+Chrome%2F25.0.1364.172+Safari%2F537.22&version=2.  Reading expired cache.
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/people.png	URL /modules/home/images/people.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/news.png	URL /modules/home/images/news.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/common/images/search-button.png	URL /common/images/search-button.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/video.png	URL /modules/home/images/video.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/calendar.png	URL /modules/home/images/calendar.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/athletics.png	URL /modules/home/images/athletics.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/photos.png	URL /modules/home/images/photos.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/emergency.png	URL /modules/home/images/emergency.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/admissions.png	URL /modules/home/images/admissions.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/kitchensink.png	URL /modules/home/images/kitchensink.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/fullweb.png	URL /modules/home/images/fullweb.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/map.png	URL /modules/home/images/map.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/customize.png	URL /modules/home/images/customize.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/social.png	URL /modules/home/images/social.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/links.png	URL /modules/home/images/links.png not found
+[Thu 03 14 21:38:19 2013]	kurogo:Warning	_404@100	/modules/home/images/about.png	URL /modules/home/images/about.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/people.png	URL /modules/home/images/people.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/news.png	URL /modules/home/images/news.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/calendar.png	URL /modules/home/images/calendar.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/athletics.png	URL /modules/home/images/athletics.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/social.png	URL /modules/home/images/social.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/common/images/search-button.png	URL /common/images/search-button.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/map.png	URL /modules/home/images/map.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/photos.png	URL /modules/home/images/photos.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/admissions.png	URL /modules/home/images/admissions.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/video.png	URL /modules/home/images/video.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/kitchensink.png	URL /modules/home/images/kitchensink.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/emergency.png	URL /modules/home/images/emergency.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/links.png	URL /modules/home/images/links.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/customize.png	URL /modules/home/images/customize.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/fullweb.png	URL /modules/home/images/fullweb.png not found
+[Thu 03 14 21:38:23 2013]	kurogo:Warning	_404@100	/modules/home/images/about.png	URL /modules/home/images/about.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/news.png	URL /modules/home/images/news.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/people.png	URL /modules/home/images/people.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/calendar.png	URL /modules/home/images/calendar.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/athletics.png	URL /modules/home/images/athletics.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/video.png	URL /modules/home/images/video.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/common/images/search-button.png	URL /common/images/search-button.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/photos.png	URL /modules/home/images/photos.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/map.png	URL /modules/home/images/map.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/admissions.png	URL /modules/home/images/admissions.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/social.png	URL /modules/home/images/social.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/links.png	URL /modules/home/images/links.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/emergency.png	URL /modules/home/images/emergency.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/kitchensink.png	URL /modules/home/images/kitchensink.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/fullweb.png	URL /modules/home/images/fullweb.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/customize.png	URL /modules/home/images/customize.png not found
+[Thu 03 14 21:39:53 2013]	kurogo:Warning	_404@100	/modules/home/images/about.png	URL /modules/home/images/about.png not found
+[Thu 03 14 21:48:24 2013]	deviceDetection:Warning	DeviceClassifier->detectDeviceExternal@421	/map/	Error receiving device detection data from https://modolabs-device.appspot.com/api/?user-agent=Mozilla%2F5.0+%28Windows+NT+6.1%3B+WOW64%29+AppleWebKit%2F537.22+%28KHTML%2C+like+Gecko%29+Chrome%2F25.0.1364.172+Safari%2F537.22&version=2.  Reading expired cache.
+[Thu 03 14 21:48:24 2013]	kurogo:Warning	_404@100	/common/images/title-map.png	URL /common/images/title-map.png not found
+[Thu 03 14 21:48:24 2013]	kurogo:Warning	_404@100	/common/images/search-button.png	URL /common/images/search-button.png not found
+[Thu 03 14 21:48:24 2013]	kurogo:Warning	_404@100	/common/images/homelink.png	URL /common/images/homelink.png not found
+[Thu 03 14 21:48:24 2013]	kurogo:Warning	_404@100	/common/images/homelink.png	URL /common/images/homelink.png not found
+[Thu 03 14 21:48:24 2013]	kurogo:Warning	_404@100	/common/images/title-map.png	URL /common/images/title-map.png not found
+[Thu 03 14 21:48:24 2013]	kurogo:Warning	_404@100	/common/images/search-button.png	URL /common/images/search-button.png not found
+[Thu 03 14 21:48:24 2013]	kurogo:Warning	_404@100	/device/unknown-unknown-unknown/common/images/navback.png	URL /device/unknown-unknown-unknown/common/images/navback.png not found
+[Thu 03 14 21:58:17 2013]	url_retriever:Warning	URLDataRetriever->retrieveResponse@423	/social/	Expectation Failed for http://api.twitter.com/1/statuses/user_timeline.json?screen_name=kurogofwk&trim_user=1
+[Fri 03 15 00:05:17 2013]	module:Error	Module::factory@198	/eldertracker/	No valid class found for module eldertracker
+[Fri 03 15 00:05:17 2013]	exception:Critical	Module::factory@199	/eldertracker/	A KurogoModuleNotFound has occured: Module eldertracker not found
+[Fri 03 15 00:06:12 2013]	module:Error	Module::factory@198	/eldertracker/	No valid class found for module eldertracker
+[Fri 03 15 00:06:12 2013]	exception:Critical	Module::factory@199	/eldertracker/	A KurogoModuleNotFound has occured: Module eldertracker not found
+[Fri 03 15 00:06:29 2013]	module:Error	Module::factory@198	/eldertracker/	No valid class found for module eldertracker
+[Fri 03 15 00:06:29 2013]	exception:Critical	Module::factory@199	/eldertracker/	A KurogoModuleNotFound has occured: Module eldertracker not found
+[Fri 03 15 00:06:33 2013]	module:Error	Module::factory@109	/hello/	Module config file not found for module hello
+[Fri 03 15 00:06:33 2013]	exception:Critical	Module::factory@110	/hello/	A KurogoModuleNotFound has occured: Module hello not found
+[Fri 03 15 00:07:42 2013]	module:Error	Module::factory@198	/eldertracker/	No valid class found for module eldertracker
+[Fri 03 15 00:07:42 2013]	exception:Critical	Module::factory@199	/eldertracker/	A KurogoModuleNotFound has occured: Module eldertracker not found
+[Fri 03 15 00:09:04 2013]	kurogo:Warning	_404@100	/modules/home/images/eldertracker.png	URL /modules/home/images/eldertracker.png not found
+[Fri 03 15 00:09:06 2013]	module:Error	Module::factory@198	/eldertracker/	No valid class found for module eldertracker
+[Fri 03 15 00:09:06 2013]	exception:Critical	Module::factory@199	/eldertracker/	A KurogoModuleNotFound has occured: Module eldertracker not found
+[Fri 03 15 00:09:07 2013]	kurogo:Warning	_404@100	/modules/home/images/eldertracker.png	URL /modules/home/images/eldertracker.png not found
+[Fri 03 15 00:10:03 2013]	module:Error	Module::factory@198	/rest/admin/getconfigdata?v=1&type=site&section=modules	No valid class found for module core
+[Fri 03 15 00:10:03 2013]	module:Error	Module::factory@198	/rest/admin/getconfigdata?v=1&type=site&section=modules	No valid class found for module eldertracker
+[Fri 03 15 00:10:04 2013]	module:Error	Module::factory@198	/rest/admin/getconfigdata?v=1&type=site&section=modules	No valid class found for module core
+[Fri 03 15 00:10:04 2013]	module:Error	Module::factory@198	/rest/admin/getconfigdata?v=1&type=site&section=modules	No valid class found for module eldertracker
+[Fri 03 15 00:10:15 2013]	module:Error	Module::factory@198	/admin/modules	No valid class found for module core
+[Fri 03 15 00:10:15 2013]	module:Error	Module::factory@198	/admin/modules	No valid class found for module eldertracker
+[Fri 03 15 00:10:56 2013]	module:Error	Module::factory@198	/admin/modules?section=homescreen	No valid class found for module core
+[Fri 03 15 00:10:56 2013]	module:Error	Module::factory@198	/admin/modules?section=homescreen	No valid class found for module eldertracker
+[Fri 03 15 00:10:57 2013]	module:Error	Module::factory@198	/admin/modules?section=homescreen	No valid class found for module core
+[Fri 03 15 00:10:57 2013]	module:Error	Module::factory@198	/admin/modules?section=homescreen	No valid class found for module eldertracker
+[Fri 03 15 00:10:58 2013]	kurogo:Warning	_404@100	/modules/home/images/eldertracker.png	URL /modules/home/images/eldertracker.png not found
+[Fri 03 15 00:11:10 2013]	kurogo:Warning	_404@100	/modules/home/images/eldertracker.png	URL /modules/home/images/eldertracker.png not found
+[Fri 03 15 00:11:15 2013]	kurogo:Warning	_404@100	/modules/home/images/eldertracker.png	URL /modules/home/images/eldertracker.png not found
+[Fri 03 15 00:11:16 2013]	module:Error	Module::factory@198	/eldertracker/	No valid class found for module eldertracker
+[Fri 03 15 00:11:16 2013]	exception:Critical	Module::factory@199	/eldertracker/	A KurogoModuleNotFound has occured: Module eldertracker not found
+[Fri 03 15 00:11:18 2013]	kurogo:Warning	_404@100	/modules/home/images/eldertracker.png	URL /modules/home/images/eldertracker.png not found
+[Fri 03 15 00:14:46 2013]	kurogo:Warning	_404@100	/modules/home/images/eldertracker.png	URL /modules/home/images/eldertracker.png not found
+[Fri 03 15 00:14:47 2013]	kurogo:Warning	_404@100	/modules/home/images/eldertracker.png	URL /modules/home/images/eldertracker.png not found
+[Fri 03 15 00:14:48 2013]	module:Error	Module::factory@198	/eldertracker/	No valid class found for module eldertracker
+[Fri 03 15 00:14:48 2013]	exception:Critical	Module::factory@199	/eldertracker/	A KurogoModuleNotFound has occured: Module eldertracker not found
+[Fri 03 15 00:17:13 2013]	kurogo:Warning	_404@100	/modules/home/images/eldertracker.png	URL /modules/home/images/eldertracker.png not found
+[Fri 03 15 00:21:04 2013]	module:Error	Module::factory@198	/eldertracker/	No valid class found for module eldertracker
+[Fri 03 15 00:21:04 2013]	exception:Critical	Module::factory@199	/eldertracker/	A KurogoModuleNotFound has occured: Module eldertracker not found
+[Fri 03 15 00:23:31 2013]	kurogo:Warning	_404@100	/modules/home/images/eldertracker.png	URL /modules/home/images/eldertracker.png not found
+[Fri 03 15 00:23:32 2013]	module:Error	Module::factory@198	/eldertracker/	No valid class found for module eldertracker
+[Fri 03 15 00:23:32 2013]	exception:Critical	Module::factory@199	/eldertracker/	A KurogoModuleNotFound has occured: Module eldertracker not found
+[Fri 03 15 00:23:33 2013]	kurogo:Warning	_404@100	/modules/home/images/eldertracker.png	URL /modules/home/images/eldertracker.png not found
+[Fri 03 15 00:23:33 2013]	module:Error	Module::factory@198	/eldertracker/	No valid class found for module eldertracker
+[Fri 03 15 00:23:33 2013]	exception:Critical	Module::factory@199	/eldertracker/	A KurogoModuleNotFound has occured: Module eldertracker not found
+[Fri 03 15 00:23:36 2013]	kurogo:Warning	_404@100	/modules/home/images/eldertracker.png	URL /modules/home/images/eldertracker.png not found
+[Fri 03 15 00:26:27 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 00:35:49 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 00:36:23 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 00:36:26 2013]	exception:Critical	Smarty_Internal_Template->isExisting@163	/hello/other	A SmartyException has occured: Unable to load template file 'modules/hello/templates/other'
+[Fri 03 15 00:36:28 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 00:38:46 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 00:38:49 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 00:38:52 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 00:39:00 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 00:39:03 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 00:39:05 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 00:39:07 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:06:16 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:06:28 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:06:28 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:21:59 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:21:59 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:24:47 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:24:47 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:25:30 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:27:00 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:27:00 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:37:52 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:37:52 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:44:53 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:44:53 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:48:46 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:48:46 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:49:03 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:49:03 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:49:08 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:49:08 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:58:31 2013]	module:Error	Module::factory@109	/other/	Module config file not found for module other
+[Fri 03 15 02:58:31 2013]	exception:Critical	Module::factory@110	/other/	A KurogoModuleNotFound has occured: Module other not found
+[Fri 03 15 02:59:01 2013]	module:Error	Module::factory@109	/other/	Module config file not found for module other
+[Fri 03 15 02:59:01 2013]	exception:Critical	Module::factory@110	/other/	A KurogoModuleNotFound has occured: Module other not found
+[Fri 03 15 02:59:11 2013]	exception:Critical	Smarty_Internal_Template->isExisting@163	/home/other	A SmartyException has occured: Unable to load template file 'modules/home/templates/other'
+[Fri 03 15 02:59:24 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:59:24 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:59:44 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 02:59:45 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 20:12:02 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:13:40 2013]	exception:Critical	DataRetriever::factory@284	/hello/	A KurogoConfigurationException has occured: Retriever class WoTKDataRetriever not defined
+[Fri 03 15 21:14:02 2013]	exception:Critical	DataRetriever::factory@284	/hello/	A KurogoConfigurationException has occured: Retriever class WoTKDataRetriever not defined
+[Fri 03 15 21:14:48 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:14:55 2013]	exception:Critical	DataRetriever::factory@284	/hello/	A KurogoConfigurationException has occured: Retriever class WoTKDataRetriever not defined
+[Fri 03 15 21:20:29 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:20:36 2013]	exception:Critical	DataRetriever::factory@284	/hello/	A KurogoConfigurationException has occured: Retriever class WoTKDataRetriever not defined
+[Fri 03 15 21:20:40 2013]	exception:Critical	DataRetriever::factory@284	/hello/	A KurogoConfigurationException has occured: Retriever class WoTKDataRetriever not defined
+[Fri 03 15 21:26:51 2013]	exception:Critical	DataRetriever::factory@284	/hello/	A KurogoConfigurationException has occured: Retriever class WoTKDataRetriever not defined
+[Fri 03 15 21:28:14 2013]	exception:Critical	DataRetriever::factory@284	/hello/	A KurogoConfigurationException has occured: Retriever class WoTKDataRetriever not defined
+[Fri 03 15 21:37:26 2013]	exception:Critical	DataRetriever::factory@284	/hello/	A KurogoConfigurationException has occured: Retriever class WoTKDataRetriever not defined
+[Fri 03 15 21:38:44 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:40:43 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:40:49 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:42:30 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:42:30 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:42:30 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:43:45 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:43:46 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:43:46 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:44:06 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:45:28 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:46:13 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:46:13 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:46:13 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:46:40 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:48:07 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:48:07 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:48:07 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:49:44 2013]	module:Error	Module::factory@109	/images/srpr/logo1w.png	Module config file not found for module images
+[Fri 03 15 21:49:44 2013]	module:Error	Module::factory@109	/xjs/_/js/hp/sb_he,pcc/rt=j/ver=kZzP7WLWDa8.en_US./d=1/sv=1/rs=AItRSTMrrcrCAA791p2QB-ap_BkElvsTOw	Module config file not found for module xjs
+[Fri 03 15 21:49:44 2013]	exception:Critical	Module::factory@110	/images/srpr/logo1w.png	A KurogoModuleNotFound has occured: Module images not found
+[Fri 03 15 21:49:44 2013]	exception:Critical	Module::factory@110	/xjs/_/js/hp/sb_he,pcc/rt=j/ver=kZzP7WLWDa8.en_US./d=1/sv=1/rs=AItRSTMrrcrCAA791p2QB-ap_BkElvsTOw	A KurogoModuleNotFound has occured: Module xjs not found
+[Fri 03 15 21:49:44 2013]	module:Error	Module::factory@109	/images/srpr/nav_logo80.png	Module config file not found for module images
+[Fri 03 15 21:49:44 2013]	exception:Critical	Module::factory@110	/images/srpr/nav_logo80.png	A KurogoModuleNotFound has occured: Module images not found
+[Fri 03 15 21:49:44 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:49:44 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:50:20 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:50:20 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:50:20 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:58:26 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:58:26 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 21:58:51 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 22:03:10 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 22:03:10 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 22:03:10 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 22:03:34 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 22:03:34 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 22:03:35 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 22:18:17 2013]	maps:Warning	MapWebModule->getCurrentFeed@231	/map/campus?group=newyork&_b=%5B%5D	Warning: unable to find feed data for feed 
+[Fri 03 15 22:18:17 2013]	maps:Warning	MapWebModule->getCurrentFeed@231	/map/campus?group=newyork&_b=%5B%5D	Warning: unable to find feed data for feed 
+[Fri 03 15 22:18:32 2013]	maps:Warning	MapWebModule->getCurrentFeed@231	/map/campus?group=newyork&_b=%5B%5D	Warning: unable to find feed data for feed 
+[Fri 03 15 22:18:32 2013]	maps:Warning	MapWebModule->getCurrentFeed@231	/map/campus?group=newyork&_b=%5B%5D	Warning: unable to find feed data for feed 
+[Fri 03 15 22:25:38 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Fri 03 15 22:25:40 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 22:25:40 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 22:25:40 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 22:26:30 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 22:27:20 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Fri 03 15 22:27:32 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Fri 03 15 22:30:41 2013]	exception:Critical	ModuleConfigFile->getFileByType@74	/hello/	A KurogoConfigurationException has occured: Unable to find feedgroups-default config file for module hello
+[Fri 03 15 22:31:20 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Fri 03 15 22:33:47 2013]	maps:Warning	MapWebModule->getCurrentFeed@231	/map/	Warning: unable to find feed data for feed 
+[Fri 03 15 22:33:47 2013]	maps:Warning	MapWebModule->getCurrentFeed@231	/map/	Warning: unable to find feed data for feed 
+[Fri 03 15 22:33:58 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Fri 03 15 22:33:59 2013]	maps:Warning	MapWebModule->getCurrentFeed@231	/map/	Warning: unable to find feed data for feed 
+[Fri 03 15 22:33:59 2013]	maps:Warning	MapWebModule->getCurrentFeed@231	/map/	Warning: unable to find feed data for feed 
+[Fri 03 15 22:34:54 2013]	maps:Warning	MapWebModule->getCurrentFeed@231	/map/	Warning: unable to find feed data for feed 
+[Fri 03 15 22:34:54 2013]	maps:Warning	MapWebModule->getCurrentFeed@231	/map/	Warning: unable to find feed data for feed 
+[Sat 03 16 03:33:40 2013]	maps:Warning	MapWebModule->getCurrentFeed@231	/map/campus?group=boston&_b=%5B%5D	Warning: unable to find feed data for feed 
+[Sat 03 16 03:33:40 2013]	maps:Warning	MapWebModule->getCurrentFeed@231	/map/campus?group=boston&_b=%5B%5D	Warning: unable to find feed data for feed 
+[Sat 03 16 17:19:16 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:19:40 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:20:38 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:20:56 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:24:13 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:25:23 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:27:02 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:28:25 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:28:35 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:31:10 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:35:28 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:35:44 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:43:12 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:44:24 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:44:47 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:45:11 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:47:06 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:47:36 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:51:17 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:51:35 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:53:08 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:55:31 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:56:27 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:58:59 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 17:59:37 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 18:01:59 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 18:04:21 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 18:05:34 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 18:06:31 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 18:06:47 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 18:30:38 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 18:31:02 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 18:31:21 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 18:44:12 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 18:44:31 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:01:16 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:01:21 2013]	module:Error	Module::factory@109	/getdata/	Module config file not found for module getdata
+[Sat 03 16 20:01:21 2013]	exception:Critical	Module::factory@110	/getdata/	A KurogoModuleNotFound has occured: Module getdata not found
+[Sat 03 16 20:01:56 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:01:58 2013]	exception:Critical	Smarty_Internal_Template->isExisting@163	/hello/getdata	A SmartyException has occured: Unable to load template file 'modules/hello/templates/getdata'
+[Sat 03 16 20:02:35 2013]	exception:Critical	Smarty_Internal_Template->isExisting@163	/hello/getdata	A SmartyException has occured: Unable to load template file 'modules/hello/templates/getdata'
+[Sat 03 16 20:02:41 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:03:35 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:04:02 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:05:21 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:05:42 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:05:51 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:08:08 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:09:36 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:10:56 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:13:25 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 10 "{foo();}" unknown function "foo"
+[Sat 03 16 20:14:03 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 10 "{$this-&gt;foo();}"  - Unexpected ";", expected one of: "}" , " "
+[Sat 03 16 20:15:01 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:21:41 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:21:41 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:22:36 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:22:36 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:23:18 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 5 "{$foo(&quot;locationprobe_cce1d58557e202ec&quot;)}"  - Unexpected "(", expected one of: "}" , " "
+[Sat 03 16 20:24:38 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:25:29 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:27:48 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:27:50 2013]	exception:Critical	WebModule->setPage@1473	/hello/142.103.25.37/api/sensors/coffeejack.locationprobe_cce1d58557e202ec/data	A KurogoPageNotFoundException has occured: Invalid Page Name
+[Sat 03 16 20:28:20 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:36:58 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:37:20 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:38:01 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:38:01 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:39:11 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:39:24 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:39:49 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:40:15 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:41:53 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:42:08 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:42:34 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:43:35 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:44:08 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:44:29 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:44:39 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:45:29 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:45:29 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:46:11 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:46:12 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:50:09 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:50:10 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:51:05 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:51:15 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:54:06 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:55:21 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 20:55:59 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 21:46:23 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 21:52:39 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 21:57:14 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 21:57:52 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 21:59:32 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:01:44 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:01:46 2013]	exception:Critical	Smarty_Internal_Template->isExisting@163	/hello/foo	A SmartyException has occured: Unable to load template file 'modules/hello/templates/foo'
+[Sat 03 16 22:02:46 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:28:42 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:29:29 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:29:45 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:30:37 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:32:30 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:32:32 2013]	exception:Critical	APIResponse->getJSONOutput@72	/rest/hello/getdata?	A KurogoException has occured: APIResponse version must be set before display
+[Sat 03 16 22:32:57 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:32:59 2013]	exception:Critical	APIResponse->getJSONOutput@72	/rest/hello/getdata?	A KurogoException has occured: APIResponse version must be set before display
+[Sat 03 16 22:34:07 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:34:32 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:37:23 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:45:26 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:48:12 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:50:22 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:50:49 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:51:47 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 22:53:17 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 23:57:02 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sat 03 16 23:58:37 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:00:50 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:02:28 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:02:44 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:04:34 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:07:54 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:09:20 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:10:11 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:10:40 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:11:13 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:14:54 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:15:59 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:16:55 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:21:43 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:22:16 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:24:19 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:24:36 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:24:53 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:29:16 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:31:02 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:31:39 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:33:23 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:33:56 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:34:22 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:34:58 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:35:23 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:40:38 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:42:01 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:42:16 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:43:33 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:44:29 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:45:50 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:46:28 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:47:48 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:51:02 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:54:43 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:56:14 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:57:49 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:57:58 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:59:33 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 00:59:34 2013]	exception:Critical	WebModule->setPage@1473	/hello/pinkball.png	A KurogoPageNotFoundException has occured: Invalid Page Name
+[Sun 03 17 01:00:42 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 01:02:00 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 01:03:37 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 01:04:43 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 01:05:12 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 01:05:36 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 01:05:53 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 01:38:51 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 01:39:28 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 01:41:15 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 01:55:52 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 01:56:07 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 01:57:23 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 02:02:52 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 02:03:33 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 02:04:00 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 02:04:18 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 02:07:43 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 02:08:02 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 02:08:50 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 19:41:18 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 19:41:57 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 19:46:13 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 87 "google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:46:29 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 87 "google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:47:21 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 87 "google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:47:45 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 87 "// google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:47:57 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 87 "// google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:48:12 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 87 "// google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:48:34 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 86 "// google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:49:15 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 86 "// google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:49:47 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 19:50:16 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 19:50:47 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 144 "var options = {'title':'How Much Pizza I Ate Last Night',"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:56:05 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 144 "var options = {'title':'How Much Pizza I Ate Last Night',"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:56:29 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 144 "// var options = {'title':'How Much Pizza I Ate Last Night',"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:56:37 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 144 "// var options = {'title':'How Much Pizza I Ate Last Night',"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:57:03 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 144 "// var options = {'title':'How Much Pizza I Ate Last Night',"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:57:14 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 19:57:28 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 19:57:49 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 143 "var options = {'title':'How Much Pizza I Ate Last Night',"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 19:58:04 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 19:58:41 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 27 "google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 20:01:02 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 27 "google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 20:01:19 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 27 "google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 20:01:45 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 27 "google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 20:02:38 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:03:25 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:03:55 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 27 "//google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 20:04:11 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:05:24 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:06:09 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:08:00 2013]	exception:Critical	Smarty_Internal_TemplateCompilerBase->trigger_template_error@431	/hello/	A SmartyCompilerException has occured: Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 96 "google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "
+[Sun 03 17 20:08:16 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:09:37 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:10:45 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:11:19 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:11:34 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:12:02 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:12:10 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:12:31 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:13:54 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:15:01 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:20:03 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:21:30 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:21:49 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:22:36 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:22:49 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:23:10 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:24:45 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:26:40 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:27:24 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:32:05 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:34:47 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:35:05 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:35:25 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:35:53 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:36:50 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:38:01 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:39:44 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:39:56 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:41:07 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:46:22 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:46:51 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:46:51 2013]	exception:Critical	APIResponse->getJSONOutput@72	/rest/hello/getdata?probe=locationprobe	A KurogoException has occured: APIResponse version must be set before display
+[Sun 03 17 20:47:21 2013]	exception:Critical	APIResponse->getJSONOutput@72	/rest/hello/getdata?probe=locationprobe	A KurogoException has occured: APIResponse version must be set before display
+[Sun 03 17 20:48:11 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:48:45 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:50:08 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:51:07 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:52:25 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:53:00 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:53:54 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:55:33 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:55:53 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 20:59:42 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 21:00:45 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 21:01:17 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 21:01:29 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 21:02:30 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 21:04:36 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 21:08:20 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 21:11:01 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 21:11:16 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 21:12:09 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 21:12:31 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 21:13:26 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 22:19:37 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 22:24:17 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 22:28:02 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:28:05 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 22:32:23 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 22:32:26 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:32:30 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 22:32:52 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:34:47 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:36:05 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:36:08 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 22:36:10 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:36:29 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:40:45 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:40:50 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 22:40:51 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:41:05 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:41:41 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:42:45 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:43:29 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:45:59 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:46:35 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:47:05 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:47:16 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:47:25 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 22:47:31 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:51:14 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:51:42 2013]	kurogo:Warning	_404@100	/common/images/title-hello.png	URL /common/images/title-hello.png not found
+[Sun 03 17 22:51:53 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:54:38 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Sun 03 17 22:54:58 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Mon 03 18 01:15:21 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found
+[Mon 03 18 01:15:26 2013]	kurogo:Warning	_404@100	/modules/home/images/hello.png	URL /modules/home/images/hello.png not found

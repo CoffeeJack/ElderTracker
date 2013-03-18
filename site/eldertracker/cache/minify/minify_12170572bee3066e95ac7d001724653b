@@ -1,0 +1,630 @@
+
+/* maps.js */
+
+/* 1   */ /*
+/* 2   *|  * Copyright © 2010 - 2012 Modo Labs Inc. All rights reserved.
+/* 3   *|  *
+/* 4   *|  * The license governing the contents of this file is located in the LICENSE
+/* 5   *|  * file located at the root directory of this distribution. If the LICENSE file
+/* 6   *|  * is missing, please contact sales@modolabs.com.
+/* 7   *|  *
+/* 8   *|  */
+/* 9   */ 
+/* 10  */ ///// various base maps
+/* 11  */ 
+/* 12  */ function KGOMapLoader(attribs) {
+/* 13  */     attribs = attribs || {};
+/* 14  */ 
+/* 15  */     this.initLat = ("lat" in attribs) ? attribs["lat"] : 0;
+/* 16  */     this.initLon = ("lon" in attribs) ? attribs["lon"] : 0;
+/* 17  */     this.initZoom = ("zoom" in attribs) ? attribs["zoom"] : 1;
+/* 18  */     this.mapElement = ("mapElement" in attribs) ? attribs["mapElement"] : null;
+/* 19  */     this.minZoomLevel = ("minZoom" in attribs) ? parseInt(attribs["minZoom"]) : 0;
+/* 20  */     this.maxZoomLevel = ("maxZoom" in attribs) ? parseInt(attribs["maxZoom"]) : 25;
+/* 21  */ 
+/* 22  */     this.placemarks = [];
+/* 23  */     this.showUserLocation = true;
+/* 24  */     this.userLocationMarker = null;
+/* 25  */     this.currentPlacemark = null;
+/* 26  */ 
+/* 27  */     // user location
+/* 28  */     this.locateMeButton = null; // CSS applies to an <a id="locateMe"> element
+/* 29  */     this.locationWatchId = null;
+/* 30  */     this.locationIsFirstPosition = true;
+/* 31  */ 
+/* 32  */     if ("onShowCallout" in attribs) {
+/* 33  */         this.onShowCallout = attribs["onShowCallout"];
+/* 34  */     }
+/* 35  */ }
+/* 36  */ 
+/* 37  */ KGOMapLoader.prototype.loadMap = function() {}
+/* 38  */ 
+/* 39  */ // annotations
+/* 40  */ KGOMapLoader.prototype.showDefaultCallout = function() {
+/* 41  */     var count = 0;
+/* 42  */     var thePlacemark = null;
+/* 43  */     for (var id in this.placemarks) {
+/* 44  */         count++;
+/* 45  */         thePlacemark = id;
+/* 46  */         if (count > 1) {
+/* 47  */             break;
+/* 48  */         }
+/* 49  */     }
+/* 50  */ 
+
+/* maps.js */
+
+/* 51  */     if (count == 1) {
+/* 52  */         this.showCalloutForPlacemark(thePlacemark);
+/* 53  */     }
+/* 54  */ }
+/* 55  */ KGOMapLoader.prototype.showCalloutForPlacemark = function(placemarkId) {}
+/* 56  */ KGOMapLoader.prototype.addPlacemark = function(id, placemark, attribs) {}
+/* 57  */ KGOMapLoader.prototype.clearMarkers = function() {}
+/* 58  */ KGOMapLoader.prototype.createMarker = function(id, lat, lon, attribs) {}
+/* 59  */ 
+/* 60  */ // base map
+/* 61  */ KGOMapLoader.prototype.resizeMapOnContainerResize = function() {}
+/* 62  */ KGOMapLoader.prototype.setMapBounds = function(minLat, minLon, maxLat, maxLon) {} // top left bottom right
+/* 63  */ 
+/* 64  */ // user location
+/* 65  */ KGOMapLoader.prototype.locationUpdated = function(location) {}
+/* 66  */ KGOMapLoader.prototype.locationUpdateStopped = function(error) {}
+/* 67  */ KGOMapLoader.prototype.toggleLocationUpdates = function() {
+/* 68  */     if (this.locationWatchId === null) {
+/* 69  */         this.startLocationUpdates();
+/* 70  */     } else {
+/* 71  */         this.stopLocationUpdates();
+/* 72  */     }
+/* 73  */ }
+/* 74  */ KGOMapLoader.prototype.startLocationUpdates = function() {
+/* 75  */     this.locateMeButton.style.backgroundPosition = "-200px 0px";
+/* 76  */     var that = this;
+/* 77  */     that.locationIsFirstPosition = true;
+/* 78  */     that.locationWatchId = navigator.geolocation.watchPosition(
+/* 79  */         function (location) {
+/* 80  */             that.locationUpdated(location, that.locationIsFirstPosition);
+/* 81  */             that.locationIsFirstPosition = false;
+/* 82  */         },
+/* 83  */         function (error) {}, // don't really want to stop trying to locate here
+/* 84  */         {enableHighAccuracy: true}
+/* 85  */     );
+/* 86  */ }
+/* 87  */ KGOMapLoader.prototype.stopLocationUpdates = function() {
+/* 88  */     this.locateMeButton.style.backgroundPosition = "-160px 0px";
+/* 89  */     if (this.locationWatchId != null) {
+/* 90  */         navigator.geolocation.clearWatch(this.locationWatchId);
+/* 91  */         this.locationWatchId = null;
+/* 92  */         this.locationUpdateStopped(null);
+/* 93  */     }
+/* 94  */ }
+/* 95  */ 
+/* 96  */ KGOMapLoader.prototype.generateInfoWindowContent = function(attribs) {
+/* 97  */     var content = '';
+/* 98  */     if ("title" in attribs && attribs["title"] !== null) {
+/* 99  */         content += '<div class="map_name">' + attribs["title"] + '</div>';
+/* 100 */     }
+
+/* maps.js */
+
+/* 101 */     if ("subtitle" in attribs && attribs["subtitle"] !== null) {
+/* 102 */         content += '<div class="smallprint map_address">' + attribs["subtitle"] + '</div>';
+/* 103 */     }
+/* 104 */     content += '<div class="calloutTail"></div>';
+/* 105 */ 
+/* 106 */     var div = document.createElement("div");
+/* 107 */     div.className = "calloutMain";
+/* 108 */     var a = null;
+/* 109 */ 
+/* 110 */     if ("url" in attribs && attribs["url"] !== null) {
+/* 111 */         a = document.createElement("a");
+/* 112 */         a.href = attribs["url"];
+/* 113 */     }
+/* 114 */ 
+/* 115 */     if ("onclick" in attribs) {
+/* 116 */         if (!a) {
+/* 117 */             a = document.createElement("a");
+/* 118 */         }
+/* 119 */         a.onclick = attribs["onclick"];
+/* 120 */     }
+/* 121 */ 
+/* 122 */     if (a) {
+/* 123 */         div.appendChild(a);
+/* 124 */         a.innerHTML = content;
+/* 125 */     } else {
+/* 126 */         div.innerHTML = content;
+/* 127 */     }
+/* 128 */     return div;
+/* 129 */ }
+/* 130 */ 
+/* 131 */ function KGOGoogleMapLoader(attribs) {
+/* 132 */     KGOMapLoader.call(this, attribs);
+/* 133 */ 
+/* 134 */     var that = this;
+/* 135 */     var currentInfoWindow = null;
+/* 136 */     var setCurrentInfoWindow = function(infoWindow) {
+/* 137 */         if (currentInfoWindow !== null) {
+/* 138 */             currentInfoWindow.close();
+/* 139 */         }
+/* 140 */         currentInfoWindow = infoWindow;
+/* 141 */         var calloutListener = google.maps.event.addDomListener(map, 'click', function() {
+/* 142 */             if (currentInfoWindow !== null) {
+/* 143 */                 currentInfoWindow.close();
+/* 144 */                 currentInfoWindow = null;
+/* 145 */             }
+/* 146 */             google.maps.event.removeListener(calloutListener);
+/* 147 */         });
+/* 148 */     }
+/* 149 */ 
+/* 150 */     this.closeCurrentInfoWindow = function() {
+
+/* maps.js */
+
+/* 151 */         setCurrentInfoWindow(null);
+/* 152 */     }
+/* 153 */ 
+/* 154 */     this.showCalloutForPlacemark = function(placemark) {
+/* 155 */         var marker = placemark;
+/* 156 */         if (typeof placemark == 'number' || typeof placemark == 'string') {
+/* 157 */             marker = this.placemarks[placemark];
+/* 158 */         }
+/* 159 */         if (currentInfoWindow != marker.infoWindow) {
+/* 160 */             if (typeof marker.getPosition == 'function') {
+/* 161 */                 marker.infoWindow.open(map, marker);
+/* 162 */             } else {
+/* 163 */                 marker.infoWindow.open(map);
+/* 164 */             }
+/* 165 */             setCurrentInfoWindow(marker.infoWindow);
+/* 166 */ 
+/* 167 */             if (typeof that.onShowCallout == 'function') {
+/* 168 */                 that.onShowCallout(placemark);
+/* 169 */             }
+/* 170 */         }
+/* 171 */     }
+/* 172 */ }
+/* 173 */ 
+/* 174 */ KGOGoogleMapLoader.prototype = new KGOMapLoader();
+/* 175 */ 
+/* 176 */ KGOGoogleMapLoader.prototype.createMapControls = function() {
+/* 177 */     var controlDiv = document.createElement("div");
+/* 178 */     controlDiv.id = "mapcontrols";
+/* 179 */ 
+/* 180 */     var zoominButton = document.createElement('a');
+/* 181 */     zoominButton.id = "zoomin";
+/* 182 */     zoominButton.onclick = function() {
+/* 183 */         map.setZoom(map.getZoom() + 1);
+/* 184 */     }
+/* 185 */     controlDiv.appendChild(zoominButton);
+/* 186 */ 
+/* 187 */     var zoomoutButton = document.createElement('a');
+/* 188 */     zoomoutButton.id = "zoomout";
+/* 189 */     zoomoutButton.onclick = function() {
+/* 190 */         map.setZoom(map.getZoom() - 1);
+/* 191 */     }
+/* 192 */     controlDiv.appendChild(zoomoutButton);
+/* 193 */ 
+/* 194 */     var recenterButton = document.createElement('a');
+/* 195 */     recenterButton.id = "recenter";
+/* 196 */     var that = this;
+/* 197 */     recenterButton.onclick = function() {
+/* 198 */         map.setCenter(new google.maps.LatLng(that.initLat, that.initLon));
+/* 199 */         map.setZoom(that.initZoom);
+/* 200 */     }
+
+/* maps.js */
+
+/* 201 */     controlDiv.appendChild(recenterButton);
+/* 202 */ 
+/* 203 */     this.locateMeButton = document.createElement('a');
+/* 204 */     this.locateMeButton.id = "locateMe";
+/* 205 */     var that = this;
+/* 206 */     this.locateMeButton.onclick = function() {
+/* 207 */         that.toggleLocationUpdates();
+/* 208 */     }
+/* 209 */     controlDiv.appendChild(this.locateMeButton);
+/* 210 */ 
+/* 211 */     return controlDiv;
+/* 212 */ }
+/* 213 */ 
+/* 214 */ KGOGoogleMapLoader.prototype.loadMap = function() {
+/* 215 */     var that = this;    
+/* 216 */     var mapImage = document.getElementById(this.mapElement);
+/* 217 */     var initCoord = new google.maps.LatLng(this.initLat, this.initLon);
+/* 218 */     var options = {
+/* 219 */         zoom: this.initZoom,
+/* 220 */         center: initCoord,
+/* 221 */         mapTypeId: google.maps.MapTypeId.ROADMAP,
+/* 222 */         disableDefaultUI: true
+/* 223 */     };
+/* 224 */     map = new google.maps.Map(mapImage, options);
+/* 225 */     var tilesLoadedListener = google.maps.event.addListener(map, 'tilesloaded', function() {
+/* 226 */         map.setCenter(initCoord);
+/* 227 */         google.maps.event.removeListener(tilesLoadedListener);
+/* 228 */     });
+/* 229 */ 
+/* 230 */     google.maps.event.addListener(map, 'zoom_changed', function() {
+/* 231 */         currZoom = map.getZoom();
+/* 232 */         if (currZoom < that.minZoomLevel) map.setZoom(that.minZoomLevel);
+/* 233 */         if (currZoom > that.maxZoomLevel) map.setZoom(that.maxZoomLevel);
+/* 234 */     });
+/* 235 */ 
+/* 236 */     var controlDiv = this.createMapControls();
+/* 237 */     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(controlDiv);
+/* 238 */ }
+/* 239 */ 
+/* 240 */ KGOGoogleMapLoader.prototype.locationUpdated = function(location, firstLocation) {
+/* 241 */     var position = new google.maps.LatLng(location.coords.latitude, location.coords.longitude);
+/* 242 */     if (this.userLocationMarker === null) {
+/* 243 */         // TODO make these more customizable
+/* 244 */         var icon = new google.maps.MarkerImage(URL_BASE + 'common/images/map-location.png',
+/* 245 */             null, // original size
+/* 246 */             null, // origin (0, 0)
+/* 247 */             new google.maps.Point(8, 8), // anchor
+/* 248 */             new google.maps.Size(16, 16)); // scaled size
+/* 249 */ 
+/* 250 */         this.userLocationMarker = new google.maps.Marker({
+
+/* maps.js */
+
+/* 251 */             'clickable' : false,
+/* 252 */             'map'       : map,
+/* 253 */             'position'  : position,
+/* 254 */             'flat'      : true,
+/* 255 */             'icon'      : icon
+/* 256 */         });
+/* 257 */ 
+/* 258 */     } else {
+/* 259 */         if (this.userLocationMarker.getMap() === null) {
+/* 260 */             this.userLocationMarker.setMap(map);
+/* 261 */         }
+/* 262 */         this.userLocationMarker.setPosition(position);
+/* 263 */     }
+/* 264 */ 
+/* 265 */     // only recenter on first location so we don't rubber band on scrolling
+/* 266 */     // include current map center on map so zoom/pan is not as confusing
+/* 267 */     if (firstLocation) {
+/* 268 */         var bounds = new google.maps.LatLngBounds();
+/* 269 */         bounds.extend(new google.maps.LatLng(this.initLat, this.initLon));
+/* 270 */         bounds.extend(position);
+/* 271 */         bounds.extend(map.getCenter());
+/* 272 */         if (typeof MIN_LAT_SPAN != 'undefined') {
+/* 273 */             bounds.extend(new google.maps.LatLng(position.lat() - MIN_LAT_SPAN / 2, position.lng()));
+/* 274 */             bounds.extend(new google.maps.LatLng(position.lat() + MIN_LAT_SPAN / 2, position.lng()));
+/* 275 */         }
+/* 276 */         if (typeof MIN_LON_SPAN != 'undefined') {
+/* 277 */             bounds.extend(new google.maps.LatLng(position.lat(), position.lng() - MIN_LON_SPAN / 2));
+/* 278 */             bounds.extend(new google.maps.LatLng(position.lat(), position.lng() + MIN_LON_SPAN / 2));
+/* 279 */         }
+/* 280 */         map.fitBounds(bounds);
+/* 281 */     }
+/* 282 */ }
+/* 283 */ 
+/* 284 */ KGOGoogleMapLoader.prototype.locationUpdateStopped = function() {
+/* 285 */     if (this.userLocationMarker !== null) {
+/* 286 */         this.userLocationMarker.setMap(null); // remove marker
+/* 287 */     }
+/* 288 */ }
+/* 289 */ 
+/* 290 */ // annotations
+/* 291 */ 
+/* 292 */ // google maps specific function
+/* 293 */ KGOGoogleMapLoader.prototype.generateInfoWindow = function(attribs, needsSetPosition) {
+/* 294 */     var content = this.generateInfoWindowContent(attribs);
+/* 295 */     if (typeof InfoBox != 'undefined') {
+/* 296 */         var options = {
+/* 297 */             content: content,
+/* 298 */             boxStyle: {
+/* 299 */                 background: "#fff",
+/* 300 */                 width: "180px",
+
+/* maps.js */
+
+/* 301 */                 height: "65px",
+/* 302 */                 opacity: 0.92,
+/* 303 */             },
+/* 304 */             alignBottom: true,
+/* 305 */             pixelOffset: new google.maps.Size(-90, -35),
+/* 306 */             closeBoxMargin: "4px 2px 2px 2px",
+/* 307 */             closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif",
+/* 308 */             infoBoxClearance: new google.maps.Size(1, 1),
+/* 309 */             pane: "floatPane",
+/* 310 */             enableEventPropagation: false
+/* 311 */         };
+/* 312 */         if (needsSetPosition) {
+/* 313 */             options['position'] = new google.maps.LatLng(attribs['lat'], attribs['lon']);
+/* 314 */         }
+/* 315 */         return new InfoBox(options);
+/* 316 */     } else {
+/* 317 */         var options = {
+/* 318 */             'content' : content,
+/* 319 */             'maxWidth' : 200
+/* 320 */         }
+/* 321 */         if (needsSetPosition) {
+/* 322 */             options['position'] = new google.maps.LatLng(attribs['lat'], attribs['lon']);
+/* 323 */         }
+/* 324 */         return new google.maps.InfoWindow(options);
+/* 325 */     }
+/* 326 */ }
+/* 327 */ 
+/* 328 */ KGOGoogleMapLoader.prototype.addPlacemark = function(id, placemark, attribs) {
+/* 329 */     attribs["id"] = id;
+/* 330 */     var isOverlay = typeof placemark.getPosition != 'function';
+/* 331 */     placemark.infoWindow = this.generateInfoWindow(attribs, isOverlay);
+/* 332 */ 
+/* 333 */     var that = this;
+/* 334 */     google.maps.event.addListener(placemark, 'mousedown', function() {
+/* 335 */         that.showCalloutForPlacemark(id);
+/* 336 */     });
+/* 337 */ 
+/* 338 */     this.placemarks[id] = placemark;
+/* 339 */     this.currentPlacemark = placemark;
+/* 340 */ }
+/* 341 */ 
+/* 342 */ KGOGoogleMapLoader.prototype.clearMarkers = function() {
+/* 343 */     for (var id in this.placemarks) {
+/* 344 */         this.placemarks[id].setMap(null);
+/* 345 */     }
+/* 346 */     this.placemarks = [];
+/* 347 */     this.closeCurrentInfoWindow();
+/* 348 */ }
+/* 349 */ 
+/* 350 */ KGOGoogleMapLoader.prototype.createMarker = function(id, lat, lon, attribs) {
+
+/* maps.js */
+
+/* 351 */     // TODO: think up a better default than this
+/* 352 */     if (!"title" in attribs) {
+/* 353 */         attribs["title"] = lat + ", " + lon;
+/* 354 */     }
+/* 355 */     attribs["position"] = new google.maps.LatLng(lat, lon);
+/* 356 */     attribs["map"] = map;
+/* 357 */     this.addPlacemark(
+/* 358 */         id,
+/* 359 */         new google.maps.Marker(attribs),
+/* 360 */         attribs);
+/* 361 */ }
+/* 362 */ 
+/* 363 */ // base map
+/* 364 */ 
+/* 365 */ KGOGoogleMapLoader.prototype.resizeMapOnContainerResize = function() {
+/* 366 */     if (map) {
+/* 367 */         // the recentering code causes placemarks to appear un-centered
+/* 368 */         // sometimes on ios and android depending on when the address bar disappears
+/* 369 */         var center = map.getCenter();
+/* 370 */         google.maps.event.trigger(map, 'resize');
+/* 371 */         map.setCenter(center);
+/* 372 */     }
+/* 373 */ }
+/* 374 */ 
+/* 375 */ // top left bottom right
+/* 376 */ KGOGoogleMapLoader.prototype.setMapBounds = function(minLat, minLon, maxLat, maxLon) {
+/* 377 */     var bounds = new google.maps.LatLngBounds();
+/* 378 */     bounds.extend(new google.maps.LatLng(minLat, minLon));
+/* 379 */     bounds.extend(new google.maps.LatLng(maxLat, maxLon));
+/* 380 */     map.fitBounds(bounds);
+/* 381 */ }
+/* 382 */ 
+/* 383 */ ////////////
+/* 384 */ 
+/* 385 */ function KGOEsriMapLoader(attribs) {
+/* 386 */     KGOMapLoader.call(this, attribs);
+/* 387 */ 
+/* 388 */     if ("wkid" in attribs) {
+/* 389 */         this.projection = attribs['wkid'];
+/* 390 */         this.spatialRef = new esri.SpatialReference({ wkid: this.projection });
+/* 391 */     } else {
+/* 392 */         this.spatialRef = new esri.SpatialReference({ wkid: 4326 });
+/* 393 */     }
+/* 394 */     this.userLocationMarkerOnMap = false;
+/* 395 */ 
+/* 396 */     var that = this;
+/* 397 */     this.loadMap = function() {
+/* 398 */         that.center = new esri.geometry.Point(that.initLon, that.initLat, that.spatialRef);
+/* 399 */         map = new esri.Map(that.mapElement, {
+/* 400 */             'logo' : false,
+
+/* maps.js */
+
+/* 401 */             'slider': false,
+/* 402 */             'resizeDelay' : 300
+/* 403 */         });
+/* 404 */ 
+/* 405 */         var basemap = new esri.layers.ArcGISTiledMapServiceLayer(attribs["baseURL"]);
+/* 406 */ 
+/* 407 */         map.addLayer(basemap);
+/* 408 */ 
+/* 409 */         if ("layers" in attribs) {
+/* 410 */             for (var i = 0; i < attribs["layers"].length; i++) {
+/* 411 */                 map.addLayer(new esri.layers.ArcGISDynamicMapServiceLayer(attribs["layers"][i], 1.0));
+/* 412 */             }
+/* 413 */         }
+/* 414 */ 
+/* 415 */         // add map controls
+/* 416 */         var controlDiv = document.createElement('div');
+/* 417 */         controlDiv.id = "mapcontrols"
+/* 418 */         controlDiv.style.position = "absolute";
+/* 419 */         controlDiv.style.right = "5px";
+/* 420 */         controlDiv.style.bottom = "10px";
+/* 421 */ 
+/* 422 */         var zoominButton = document.createElement('a');
+/* 423 */         zoominButton.id = "zoomin";
+/* 424 */         zoominButton.onclick = function() {
+/* 425 */             var zoomLevel = map.getLevel();
+/* 426 */             var x = (map.extent.xmin + map.extent.xmax) / 2;
+/* 427 */             var y = (map.extent.ymin + map.extent.ymax) / 2;
+/* 428 */             map.centerAndZoom(new esri.geometry.Point(x, y, that.spatialRef), zoomLevel + 1);
+/* 429 */         }
+/* 430 */         controlDiv.appendChild(zoominButton);
+/* 431 */ 
+/* 432 */         var zoomoutButton = document.createElement('a');
+/* 433 */         zoomoutButton.id = "zoomout";
+/* 434 */         zoomoutButton.onclick = function() {
+/* 435 */             var zoomLevel = map.getLevel();
+/* 436 */             var x = (map.extent.xmin + map.extent.xmax) / 2;
+/* 437 */             var y = (map.extent.ymin + map.extent.ymax) / 2;
+/* 438 */             map.centerAndZoom(new esri.geometry.Point(x, y, that.spatialRef), zoomLevel - 1);
+/* 439 */         }
+/* 440 */         controlDiv.appendChild(zoomoutButton);
+/* 441 */ 
+/* 442 */         var recenterButton = document.createElement('a');
+/* 443 */         recenterButton.id = "recenter";
+/* 444 */         recenterButton.onclick = function() {
+/* 445 */             map.centerAndZoom(that.center, that.initZoom);
+/* 446 */         }
+/* 447 */         controlDiv.appendChild(recenterButton);
+/* 448 */ 
+/* 449 */         if ("geolocation" in navigator && that.showUserLocation) {
+/* 450 */             that.locateMeButton = document.createElement('a');
+
+/* maps.js */
+
+/* 451 */             that.locateMeButton.id = "locateMe";
+/* 452 */             that.locateMeButton.onclick = function() {
+/* 453 */                 that.toggleLocationUpdates();
+/* 454 */             }
+/* 455 */             controlDiv.appendChild(that.locateMeButton);
+/* 456 */         }
+/* 457 */ 
+/* 458 */         var mapElement = document.getElementById(that.mapElement);
+/* 459 */         if (mapElement) {
+/* 460 */             mapElement.appendChild(controlDiv);
+/* 461 */         }
+/* 462 */ 
+/* 463 */         map.infoWindow.setFixedAnchor(esri.dijit.InfoWindow.ANCHOR_UPPERRIGHT);
+/* 464 */ 
+/* 465 */         // put all dojo.connect actions here
+/* 466 */ 
+/* 467 */         dojo.connect(map, "onClick", function(evt) {
+/* 468 */             if (map.infoWindow.isShowing) {
+/* 469 */                 if (evt.screenPoint.x < map.infoWindow.coords.x
+/* 470 */                     || evt.screenPoint.x > map.infoWindow.coords.x + 250
+/* 471 */                     || evt.screenPoint.y < map.infoWindow.coords.y - 100
+/* 472 */                     || evt.screenPoint.y > map.infoWindow.coords.y
+/* 473 */                 ) {
+/* 474 */                     map.infoWindow.hide();
+/* 475 */                 }
+/* 476 */             }
+/* 477 */         });
+/* 478 */ 
+/* 479 */         dojo.connect(map, "onLoad", plotFeatures);
+/* 480 */     }
+/* 481 */ }
+/* 482 */ 
+/* 483 */ KGOEsriMapLoader.prototype = new KGOMapLoader();
+/* 484 */ 
+/* 485 */ // annotations
+/* 486 */ KGOEsriMapLoader.prototype.showCalloutForPlacemark = function(placemark) {
+/* 487 */     var graphic = placemark;
+/* 488 */     if (typeof placemark == 'number' || typeof placemark == 'string') {
+/* 489 */         graphic = this.placemarks[placemark];
+/* 490 */     }
+/* 491 */     map.infoWindow.setContent(graphic.getContent());
+/* 492 */     if (graphic.geometry.type == 'point') {
+/* 493 */         map.infoWindow.show(graphic.geometry);
+/* 494 */     } else {
+/* 495 */         var point = graphic.geometry.getExtent().getCenter();
+/* 496 */         map.infoWindow.show(point);
+/* 497 */     }
+/* 498 */ }
+/* 499 */ 
+/* 500 */ KGOEsriMapLoader.prototype.addPlacemark = function(id, placemark, attribs) {
+
+/* maps.js */
+
+/* 501 */     attribs["id"] = id;
+/* 502 */     infoTemplate = new esri.InfoTemplate();
+/* 503 */     infoTemplate.setContent(
+/* 504 */         this.generateInfoWindowContent(attribs));
+/* 505 */     placemark.setInfoTemplate(infoTemplate);
+/* 506 */     map.graphics.add(placemark);
+/* 507 */     this.placemarks[id] = placemark;
+/* 508 */     this.currentPlacemark = placemark;
+/* 509 */ }
+/* 510 */ 
+/* 511 */ KGOEsriMapLoader.prototype.clearMarkers = function() {
+/* 512 */     map.graphics.clear();
+/* 513 */ }
+/* 514 */ 
+/* 515 */ KGOEsriMapLoader.prototype.createMarker = function(id, lat, lon, attribs) {
+/* 516 */     this.addPlacemark(
+/* 517 */         id,
+/* 518 */         new esri.Graphic(
+/* 519 */             new esri.geometry.Point(lon, lat, this.spatialRef),
+/* 520 */             new esri.symbol.SimpleMarkerSymbol( // add some styling because the default is a large empty black circle
+/* 521 */                 esri.symbol.SimpleMarkerSymbol.STYLE_CIRCLE,
+/* 522 */                 12,
+/* 523 */                 new esri.symbol.SimpleLineSymbol(),
+/* 524 */                 new dojo.Color([180, 0, 0]))),
+/* 525 */         attribs
+/* 526 */     );
+/* 527 */ }
+/* 528 */ 
+/* 529 */ // base map
+/* 530 */ 
+/* 531 */ KGOEsriMapLoader.prototype.resizeMapOnContainerResize = function() {
+/* 532 */     if (map && map.loaded) {
+/* 533 */         var mapimage = document.getElementById(this.mapElement);
+/* 534 */         if (mapimage && mapimage.clientHeight) {
+/* 535 */             map.reposition();
+/* 536 */             map.resize();
+/* 537 */         }
+/* 538 */     }
+/* 539 */ }
+/* 540 */ 
+/* 541 */ KGOEsriMapLoader.prototype.setMapBounds = function(minLat, minLon, maxLat, maxLon) {
+/* 542 */     var extent = esri.geometry.Extent(minLon, minLat, maxLon, maxLat, this.spatialRef);
+/* 543 */     extent = extent.expand(1.2);
+/* 544 */     map.setExtent(extent, true);
+/* 545 */ }
+/* 546 */ 
+/* 547 */ // user location
+/* 548 */ 
+/* 549 */ KGOEsriMapLoader.prototype.locationUpdated = function(location, firstLocation) {
+/* 550 */     var params = {
+
+/* maps.js */
+
+/* 551 */         'lat': location.coords.latitude,
+/* 552 */         'lon': location.coords.longitude,
+/* 553 */         'from': 4326,
+/* 554 */         'to': this.projection
+/* 555 */     };
+/* 556 */     that = this
+/* 557 */     makeAPICall('GET', 'map', 'projectPoint', params, function(response) {
+/* 558 */         var point = new esri.geometry.Point(response.lon, response.lat, that.spatialRef);
+/* 559 */ 
+/* 560 */         if (typeof that.userLocationMarker !== null) {
+/* 561 */             // TODO make these more customizable
+/* 562 */             var pointSymbol = new esri.symbol.PictureMarkerSymbol(URL_BASE + 'common/images/map-location.png', 16, 16);
+/* 563 */             that.userLocationMarker = new esri.Graphic(point, pointSymbol);
+/* 564 */ 
+/* 565 */         } else {
+/* 566 */             that.userLocationMarker.setGeometry(point);
+/* 567 */         }
+/* 568 */         
+/* 569 */         if (!that.userLocationMarkerOnMap) {
+/* 570 */             map.graphics.add(that.userLocationMarker);
+/* 571 */             that.userLocationMarkerOnMap = true;
+/* 572 */         }
+/* 573 */ 
+/* 574 */         if (firstLocation) {
+/* 575 */             // only recenter on first location so we don't rubber band on scrolling
+/* 576 */             var points = esri.geometry.Multipoint(that.spatialRef);
+/* 577 */             points.addPoint(that.center);
+/* 578 */             points.addPoint(point);
+/* 579 */             
+/* 580 */             var extent = points.getExtent();
+/* 581 */             extent = extent.expand(1.5); // add padding around markers
+/* 582 */             map.setExtent(extent);
+/* 583 */         }
+/* 584 */     });
+/* 585 */ }
+/* 586 */ 
+/* 587 */ KGOEsriMapLoader.prototype.locationUpdateStopped = function() {
+/* 588 */     if (this.userLocationMarker !== null) {
+/* 589 */         map.graphics.remove(this.userLocationMarker);
+/* 590 */         this.userLocationMarkerOnMap = false;
+/* 591 */     }
+/* 592 */ }
+/* 593 */ 
+/* 594 */ 

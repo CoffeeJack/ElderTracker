@@ -1,0 +1,8 @@
+<strong>Retriever class WoTKDataRetriever not defined</strong><br><br><strong>Fatal error</strong>:  Uncaught exception 'KurogoConfigurationException' with message 'Retriever class WoTKDataRetriever not defined' in C:\xampp\htdocs\Kurogo\lib\DataRetriever.php:284
+Stack trace:
+#0 C:\xampp\htdocs\Kurogo\site\eldertracker\app\modules\hello\HelloWebModule.php(10): factory(string, array)
+#1 C:\xampp\htdocs\Kurogo\lib\WebModule.php(1709): initializeForPage()
+#2 C:\xampp\htdocs\Kurogo\lib\WebModule.php(1875): setPageVariables()
+#3 C:\xampp\htdocs\Kurogo\www\index.php(306): displayPage()
+#4 {main}
+  thrown in <strong>C:\xampp\htdocs\Kurogo\lib\DataRetriever.php</strong> on line <strong>284</strong>

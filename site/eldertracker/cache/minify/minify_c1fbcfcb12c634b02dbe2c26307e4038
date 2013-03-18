@@ -1,0 +1,930 @@
+/* Adding url prefix '/device/compliant-computer-unknown/' */
+
+/* Minify_CSS_UriRewriter::$debugText
+
+docRoot    : C:\xampp\htdocs\Kurogo\www
+currentDir : C:\xampp\htdocs\Kurogo\app\modules\admin\css
+symlinks : array (
+  'C:\\xampp\\htdocs\\Kurogo\\www' => 'C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\themes\\hi-def',
+)
+
+*/
+
+/* compliant-computer.css */
+
+/* 1   */ body {
+/* 2   */ 	background-color: #eee; 
+/* 3   */ 	text-align: center;
+/* 4   */ 	margin: 0;
+/* 5   */ }
+/* 6   */ body, select, input, option, textarea {
+/* 7   */ 	font: 13px/1.333em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/* 8   */ 	color: #555;
+/* 9   */ }
+/* 10  */ a {
+/* 11  */ 	color: #555;
+/* 12  */ }
+/* 13  */ a:visited {
+/* 14  */ 	color: #555;
+/* 15  */ }
+/* 16  */ a:hover {
+/* 17  */ 	color: #88a900;
+/* 18  */ }
+/* 19  */ #pagewrap {
+/* 20  */ 	position: relative;
+/* 21  */ 	width: 960px;
+/* 22  */ 	margin: 0 auto;
+/* 23  */ 	text-align: left;
+/* 24  */ }
+/* 25  */ header {
+/* 26  */ 	padding: 15px 0 30px 0;
+/* 27  */ 	float: left;
+/* 28  */ 	width: 100%;
+/* 29  */ }
+/* 30  */ #logo {
+/* 31  */ 	float: left;
+/* 32  */ 	margin-right: 15px;
+/* 33  */ }
+/* 34  */ header h1 {
+/* 35  */ 	font-size: 20px;
+/* 36  */ 	line-height: 24px;
+/* 37  */ 	font-weight: normal;
+/* 38  */ 	color: #888;
+/* 39  */ 	margin: 0;
+/* 40  */ 	padding-top: 13px;
+/* 41  */ }
+/* 42  */ #sitename {
+/* 43  */ 	display: block;
+/* 44  */ 	font-size: 30px;
+/* 45  */ 	line-height: 36px;
+/* 46  */ 	color: #000;
+/* 47  */ }
+/* 48  */ #utility {
+/* 49  */ 	position: absolute;
+/* 50  */ 	top: 0;
+
+/* compliant-computer.css */
+
+/* 51  */ 	right: 3px;
+/* 52  */ 	width: 400px;
+/* 53  */ 	text-align: right;
+/* 54  */ }
+/* 55  */ #user {
+/* 56  */ 	position: absolute;
+/* 57  */ 	top: 33px;
+/* 58  */ 	right: 0;
+/* 59  */ 	line-height: 18px;
+/* 60  */ 	color: #777;
+/* 61  */ 	width: 340px;
+/* 62  */ }
+/* 63  */ #username {
+/* 64  */ 	color: #333;
+/* 65  */ 	font-weight: bold;
+/* 66  */ }
+/* 67  */ #signout {
+/* 68  */ 	display: inline-block;
+/* 69  */ 	margin-left: 10px;
+/* 70  */ 	padding-left: 10px;
+/* 71  */ 	border-left: 1px solid #bbb;
+/* 72  */ 	color: #777;
+/* 73  */ }
+/* 74  */ 
+/* 75  */ #contentwrap {
+/* 76  */ 	position: relative;
+/* 77  */ 	height: 100%;
+/* 78  */ 	clear: both;
+/* 79  */ 	margin: 15px 0;
+/* 80  */ }
+/* 81  */ nav {
+/* 82  */ 	float: left;
+/* 83  */ 	width: 280px;
+/* 84  */ 	margin-top: 2px;
+/* 85  */ }
+/* 86  */ nav h1 {
+/* 87  */ 	display: none;
+/* 88  */ }
+/* 89  */ nav ul {
+/* 90  */ 	margin: 0;
+/* 91  */ 	padding: 0;
+/* 92  */ 	list-style-type: none;
+/* 93  */ 	text-transform: uppercase;
+/* 94  */ 	font-weight: bold;
+/* 95  */ 	border-top: 4px solid #d0d0d0;
+/* 96  */ }
+/* 97  */ nav ul ul {
+/* 98  */ 	margin-left: 20px;
+/* 99  */ 	font-weight: normal;
+/* 100 */ 	text-transform: none;
+
+/* compliant-computer.css */
+
+/* 101 */ 	border-top-width: 1px;
+/* 102 */ }
+/* 103 */ nav ul li {
+/* 104 */ 	margin: 0;
+/* 105 */ 	padding: 0;
+/* 106 */ 	border-bottom: 4px solid #d0d0d0;
+/* 107 */ }
+/* 108 */ nav ul ul li {
+/* 109 */ 	border-bottom-width: 1px;
+/* 110 */ }
+/* 111 */ nav ul ul li:last-child {
+/* 112 */ 	border-bottom: none;
+/* 113 */ }
+/* 114 */ nav a {
+/* 115 */ 	display: block;
+/* 116 */ 	text-decoration: none;
+/* 117 */ 	color: #555;
+/* 118 */ 	padding: 8px 8px 8px 34px;
+/* 119 */ 	line-height: 1.1em;
+/* 120 */ }
+/* 121 */ nav a:hover {
+/* 122 */ 	color: #000;
+/* 123 */ 	background: url("/device/compliant-computer-unknown/modules/admin/images/nav-bullet-hover.png") no-repeat 14px center;
+/* 124 */ }
+/* 125 */ nav a.current {
+/* 126 */ 	color: #000;
+/* 127 */ 	font-weight: bold;
+/* 128 */ 	background: url("/device/compliant-computer-unknown/modules/admin/images/nav-bullet.png") no-repeat 14px center;
+/* 129 */ }
+/* 130 */ nav ul ul a {
+/* 131 */ 	padding-top: 6px;
+/* 132 */ 	padding-bottom: 6px;
+/* 133 */ }
+/* 134 */ #content {
+/* 135 */ 	min-height: 600px;
+/* 136 */ 	margin-left: 320px;
+/* 137 */ 	background-color: #fff;
+/* 138 */ 	border-radius: 8px;
+/* 139 */ 	-moz-border-radius: 8px;
+/* 140 */ 	-webkit-box-shadow: 1px 1px 3px #999;
+/* 141 */ 	-moz-box-shadow: 1px 1px 3px #999;
+/* 142 */ 	padding: 18px 16px;
+/* 143 */ }
+/* 144 */ #content h1 {
+/* 145 */ 	font-size: 30px;
+/* 146 */ 	line-height: 36px;
+/* 147 */ 	font-weight: 300;
+/* 148 */ 	line-height: 1.2em;
+/* 149 */ 	color: #555;
+/* 150 */ 	margin: 0 0 10px 0;
+
+/* compliant-computer.css */
+
+/* 151 */ 	padding: 0 0 8px 0;
+/* 152 */ 	border-bottom: 1px solid #ddd;
+/* 153 */ }
+/* 154 */ .preamble {
+/* 155 */ 	color: #777;
+/* 156 */ }
+/* 157 */ fieldset {
+/* 158 */ 	margin: 0;
+/* 159 */ 	padding: 0;
+/* 160 */ 	border: none;
+/* 161 */ }
+/* 162 */ .formfields {
+/* 163 */ 	margin: 0;
+/* 164 */ 	padding: 0;
+/* 165 */ 	list-style-type: none;
+/* 166 */ }
+/* 167 */ .formfields .formfield {
+/* 168 */ 	margin: 1.67em 0;
+/* 169 */ 	padding: 0;
+/* 170 */ 	position: relative;
+/* 171 */ }
+/* 172 */ input {
+/* 173 */ 	color: #000;
+/* 174 */ }
+/* 175 */ input[type="text"], input[type="email"], input[type="url"], input[type="password"], select, textarea {
+/* 176 */ 	width: 440px;
+/* 177 */ 	color: #333;
+/* 178 */ }
+/* 179 */ 
+/* 180 */ #newModuleID {
+/* 181 */     width: auto;
+/* 182 */ }
+/* 183 */ 
+/* 184 */ input#adminCancel {
+/* 185 */ 	background-color: #a22;
+/* 186 */ 	float: right;
+/* 187 */ 	color: #fff;
+/* 188 */ 	border: none;
+/* 189 */ 	margin-top: 3px;
+/* 190 */ 	height: 32px;
+/* 191 */ 	padding: 0 18px;
+/* 192 */ 	border-radius: 5px;
+/* 193 */ 	-moz-border-radius: 5px;
+/* 194 */ 	font-size: 14px;
+/* 195 */ 	font-weight: bold;
+/* 196 */ 	line-height: 30px;
+/* 197 */ 	cursor: pointer;
+/* 198 */ }
+/* 199 */ input#adminCancel:hover {
+/* 200 */ 	color: #fff;
+
+/* compliant-computer.css */
+
+/* 201 */ 	background-color: #622;
+/* 202 */ 	border-color: #a00;
+/* 203 */ }
+/* 204 */ input#adminCancel:active {
+/* 205 */ 	color: #000;
+/* 206 */ 	background-color: #88a900;
+/* 207 */ }
+/* 208 */ 
+/* 209 */ input[type="submit"] {
+/* 210 */ 	float: right;
+/* 211 */ 	background-color: #b5cf4b;
+/* 212 */ 	color: #fff;
+/* 213 */ 	border: none;
+/* 214 */ 	margin-top: 3px;
+/* 215 */ 	height: 32px;
+/* 216 */ 	padding: 0 18px;
+/* 217 */ 	border-radius: 5px;
+/* 218 */ 	-moz-border-radius: 5px;
+/* 219 */ 	font-size: 14px;
+/* 220 */ 	font-weight: bold;
+/* 221 */ 	line-height: 30px;
+/* 222 */ 	cursor: pointer;
+/* 223 */ }
+/* 224 */ input[type="submit"]:hover {
+/* 225 */ 	color: #000;
+/* 226 */ }
+/* 227 */ input[type="submit"]:active {
+/* 228 */ 	color: #000;
+/* 229 */ 	background-color: #88a900;
+/* 230 */ }
+/* 231 */ label {	
+/* 232 */ 	display: inline-block;
+/* 233 */ 	width: 140px;
+/* 234 */ 	padding-right: 10px;
+/* 235 */ 	text-align: right;
+/* 236 */ 	font-size: 100%;
+/* 237 */ 	line-height: 1.6em;
+/* 238 */ 	font-weight: bold;
+/* 239 */ }
+/* 240 */ .helptext, .checkitem label, .tallfield textarea, .infotext, .labeltext {
+/* 241 */ 	margin-left: 150px;		/* same as width plus padding-right of label */
+/* 242 */ }
+/* 243 */ 
+/* 244 */ td .labeltext {
+/* 245 */     margin: auto;
+/* 246 */     line-height: 1.6em;
+/* 247 */ }
+/* 248 */ 
+/* 249 */ 
+/* 250 */ .tallfield .helptext {
+
+/* compliant-computer.css */
+
+/* 251 */ /*    margin-left: 0; */
+/* 252 */ }
+/* 253 */ 
+/* 254 */ 
+/* 255 */ ul.sublist {
+/* 256 */     margin: 0;
+/* 257 */     padding: 0;
+/* 258 */ }
+/* 259 */ 
+/* 260 */ ul.sublist>li.formfield {
+/* 261 */     border: 1px solid #e0e0e0;
+/* 262 */     border-top: none;
+/* 263 */     list-style:none;
+/* 264 */     margin: 0; 
+/* 265 */     padding: 0;
+/* 266 */     border-bottom: 1px solid #e0e0e0;
+/* 267 */     min-height: 36px;
+/* 268 */ }
+/* 269 */ 
+/* 270 */ ul.ui-sortable li.ui-sortable-helper,
+/* 271 */ ul.sublist>li:first-child {
+/* 272 */     border-top: 1px solid #e0e0e0;
+/* 273 */ }
+/* 274 */ 
+/* 275 */ 
+/* 276 */ ul.sublist .edithead {
+/* 277 */     padding: 3px;
+/* 278 */     line-height: 29px;
+/* 279 */ }
+/* 280 */ 
+/* 281 */ ul.ui-sortable .edithead {
+/* 282 */     margin-left: 38px;
+/* 283 */ }
+/* 284 */ 
+/* 285 */ 
+/* 286 */ ul.sublist .handle {
+/* 287 */     position: absolute;
+/* 288 */     top: 3px;
+/* 289 */     left: 3px;
+/* 290 */     width: 29px;
+/* 291 */     height: 29px;
+/* 292 */     background-image: url("/device/compliant-computer-unknown/common/images/handle.png");
+/* 293 */     background-repeat: no-repeat;
+/* 294 */     cursor: move;
+/* 295 */     background-position: 4px 4px;
+/* 296 */ }
+/* 297 */ 
+/* 298 */ 
+/* 299 */ ul.sublist .editrow {
+/* 300 */ }
+
+/* compliant-computer.css */
+
+/* 301 */ 
+/* 302 */ ul.sublist .sectionid {
+/* 303 */     display: inline-block;
+/* 304 */     width: 100px;
+/* 305 */     margin-right: 10px;
+/* 306 */ }
+/* 307 */ 
+/* 308 */ ul.sublist .numeric {
+/* 309 */     width: 20px;
+/* 310 */ }
+/* 311 */ 
+/* 312 */ ul.sublist .sectiontitle {
+/* 313 */ }
+/* 314 */ 
+/* 315 */ ul.sublist .rowbuttons {
+/* 316 */     bottom: 3px;
+/* 317 */     position: absolute;
+/* 318 */     right: 5px;
+/* 319 */ }
+/* 320 */ 
+/* 321 */ .infotext,
+/* 322 */ .labeltext {
+/* 323 */     margin-top: -18px;
+/* 324 */     display:block;
+/* 325 */ }
+/* 326 */ 
+/* 327 */ .formfields .error {
+/* 328 */     background-color: #fdd7de;
+/* 329 */     padding: .5em;
+/* 330 */ }
+/* 331 */ 
+/* 332 */ .helptext {
+/* 333 */ 	display: block;
+/* 334 */ 	padding: 2px 0 0 4px;
+/* 335 */ 	font-size: 85%;
+/* 336 */ 	line-height: 1.33em;
+/* 337 */ 	color: #777;
+/* 338 */ }
+/* 339 */ .checkitem input[type="checkbox"] {
+/* 340 */ 	margin-left: 130px;
+/* 341 */ 	position: relative;
+/* 342 */ 	top: 2px;
+/* 343 */ }
+/* 344 */ 
+/* 345 */ .checkitem label {
+/* 346 */ 	position: absolute;
+/* 347 */ 	padding-left: 4px;
+/* 348 */ 	width: auto;
+/* 349 */ 	text-align: left;
+/* 350 */ }
+
+/* compliant-computer.css */
+
+/* 351 */ .tallfield label {
+/* 352 */ 	position: absolute;
+/* 353 */ 	height: 27px;
+/* 354 */ 	line-height: 27px;
+/* 355 */ }
+/* 356 */ .fullwidth label {
+/* 357 */ 	position: relative;
+/* 358 */ 	text-align: left;
+/* 359 */ }
+/* 360 */ input.field0 {
+/* 361 */ 	width: 130px;
+/* 362 */ }
+/* 363 */ input.field1 {
+/* 364 */ 	width: 150px;
+/* 365 */ }
+/* 366 */ input.field1s {
+/* 367 */ 	width: 120px;
+/* 368 */ }
+/* 369 */ input.field2 {
+/* 370 */ 	width: 280px;
+/* 371 */ }
+/* 372 */ input.field2s {
+/* 373 */ 	width: 260px;
+/* 374 */ }
+/* 375 */ input.field3 {
+/* 376 */ 	width: 420px;
+/* 377 */ }
+/* 378 */ input.field3s {
+/* 379 */ 	width: 400px;
+/* 380 */ }
+/* 381 */ footer {	
+/* 382 */ 	float: right;
+/* 383 */ 	clear: both;
+/* 384 */ 	padding: 10px 0 20px 0;
+/* 385 */ 	text-align: right;
+/* 386 */ 	font-size: 84.6%;
+/* 387 */ 	line-height: 50px;
+/* 388 */ 	color: #555;
+/* 389 */ }
+/* 390 */ footer a {
+/* 391 */ 	color: #555;
+/* 392 */ 	text-decoration: none;
+/* 393 */ }
+/* 394 */ #footerlogo {
+/* 395 */ 	border: none;
+/* 396 */ 	float: right;
+/* 397 */ 	padding-left: 12px;
+/* 398 */ 	height: 50px;
+/* 399 */ 	width: 50px;
+/* 400 */ }
+
+/* compliant-computer.css */
+
+/* 401 */ table {
+/* 402 */ 	width: 100%;
+/* 403 */ 	line-height: 1.25em;
+/* 404 */ 	border: none;
+/* 405 */ 	border-collapse: collapse;
+/* 406 */ 	border-spacing: 0;
+/* 407 */ }
+/* 408 */ table.subtable {
+/* 409 */ 	border: 1px solid #e0e0e0;
+/* 410 */ }
+/* 411 */ th, td {
+/* 412 */ 	padding: 3px;
+/* 413 */ 	margin: 0;
+/* 414 */ 	border: none;
+/* 415 */ 	min-width: 40px;
+/* 416 */ }
+/* 417 */ th {
+/* 418 */ 	padding: 3px 4px 5px 4px;
+/* 419 */ 	background-color: #fff;
+/* 420 */ 	line-height: 1.1em;
+/* 421 */ 	border-bottom: 3px solid #888;
+/* 422 */ }
+/* 423 */ td {
+/* 424 */ 	border-bottom: 1px solid #e0e0e0;
+/* 425 */ }
+/* 426 */ td:first-child {
+/* 427 */ 	min-width: 20px;
+/* 428 */ }
+/* 429 */ table.subtable td:first-child {
+/* 430 */ 	padding-left: 5px;
+/* 431 */ }
+/* 432 */ table.subtable .formfields .formfield {
+/* 433 */ 	margin: 6px 0 12px 0;
+/* 434 */ }
+/* 435 */ table.subtable label {
+/* 436 */ 	width: 120px;
+/* 437 */ 	top: 0.25em;
+/* 438 */ 	font-weight: normal;
+/* 439 */ }
+/* 440 */ table.subtable th {
+/* 441 */ 	border-bottom: 2px solid #999;
+/* 442 */ }
+/* 443 */ select.filePrefix {
+/* 444 */     width: 100px !important;
+/* 445 */ }
+/* 446 */ input.fileData{ 
+/* 447 */     margin-left: 10px;
+/* 448 */     width: 330px;
+/* 449 */ }
+/* 450 */ input.timeData {
+
+/* compliant-computer.css */
+
+/* 451 */     width: 100px;
+/* 452 */     margin-right: 10px;
+/* 453 */ }
+/* 454 */ 
+/* 455 */ ul.sublist>li.editing {
+/* 456 */     border: none;
+/* 457 */ }
+/* 458 */ 
+/* 459 */ .editing .edithead {
+/* 460 */     display: none;
+/* 461 */ }
+/* 462 */ 
+/* 463 */ .editing .editrow {
+/* 464 */     display:block;
+/* 465 */ }
+/* 466 */ 
+/* 467 */ .editrow {
+/* 468 */ 	background-color: #ffecbf;
+/* 469 */ 	border: 1px solid #ffe16a;
+/* 470 */ 	color: #000;
+/* 471 */ 	padding-bottom: 6px;
+/* 472 */ 	display:none;
+/* 473 */ }
+/* 474 */ .editrow input, .editrow select, .editrow .helptext, .editrow span {
+/* 475 */ 	margin-left: 150px;
+/* 476 */ 	width: 310px;
+/* 477 */ }
+/* 478 */ .rowbuttons {
+/* 479 */ 	text-align: right;
+/* 480 */ }
+/* 481 */ .tablebuttons {
+/* 482 */ 	margin: 4px 0;
+/* 483 */ 	text-align: right;
+/* 484 */ }
+/* 485 */ a.textbutton {
+/* 486 */ 	display: inline-block;
+/* 487 */ 	text-align: center;
+/* 488 */ 	min-width: 50px;
+/* 489 */ 	margin: 2px;
+/* 490 */ 	padding: 4px 6px;
+/* 491 */ 	line-height: 1.2em;
+/* 492 */ 	text-decoration: none;
+/* 493 */ 	border: 1px solid #ddd;
+/* 494 */ 	background-color: #f6f6f6;
+/* 495 */ 	-webkit-border-radius: 4px;
+/* 496 */ 	-moz-border-radius: 4px;
+/* 497 */ 	border-radius: 4px;
+/* 498 */ }
+/* 499 */ a.textbutton:hover {
+/* 500 */ 	color: #fff;
+
+/* compliant-computer.css */
+
+/* 501 */ 	background-color: #666;
+/* 502 */ 	border-color: #666
+/* 503 */ }
+/* 504 */ a.textbutton:active {
+/* 505 */ 	color: #fff;
+/* 506 */ 	background-color: #333;
+/* 507 */ 	border-color: #333
+/* 508 */ }
+/* 509 */ a.textbutton.save {
+/* 510 */ 	color: #fff;
+/* 511 */ 	font-weight: bold;
+/* 512 */ 	background-color: #b5cf4b;
+/* 513 */ 	border-color: #a9c82a;
+/* 514 */ }
+/* 515 */ a.textbutton.save:hover {
+/* 516 */ 	color: #000;
+/* 517 */ }
+/* 518 */ a.textbutton.save:active {
+/* 519 */ 	color: #000;
+/* 520 */ 	background-color: #88a900;
+/* 521 */ 	border-color: #88a900;
+/* 522 */ }
+/* 523 */ a.textbutton.add:hover {
+/* 524 */ 	color: #000;
+/* 525 */ 	background-color: #b5cf4b;
+/* 526 */ 	border-color: #a9c82a;
+/* 527 */ }
+/* 528 */ a.textbutton.add:active {
+/* 529 */ 	background-color: #88a900;
+/* 530 */ 	border-color: #88a900;
+/* 531 */ }
+/* 532 */ a.textbutton.edit:hover {
+/* 533 */ 	color: #000;
+/* 534 */ 	background-color: #fce99d;
+/* 535 */ 	border-color: #ffe16a;
+/* 536 */ }
+/* 537 */ a.textbutton.edit:active {
+/* 538 */ 	color: #000;
+/* 539 */ 	background-color: #f8c704;
+/* 540 */ 	border-color: #f8c704;
+/* 541 */ }
+/* 542 */ a.textbutton.delete:hover {
+/* 543 */ 	color: #fff;
+/* 544 */ 	background-color: #a22;
+/* 545 */ 	border-color: #a00;
+/* 546 */ }
+/* 547 */ a.textbutton.delete:active {
+/* 548 */ 	color: #fff;
+/* 549 */ 	background-color: #700;
+/* 550 */ 	border-color: #700;
+
+/* compliant-computer.css */
+
+/* 551 */ }
+/* 552 */ dl {
+/* 553 */ 	font-size: 85%;
+/* 554 */ 	margin: 2em 0;
+/* 555 */ }
+/* 556 */ dt {
+/* 557 */ 	float: left;
+/* 558 */ 	text-align: right;
+/* 559 */ 	min-width: 120px;
+/* 560 */ 	font-weight: bold;
+/* 561 */ 	padding-right: 0.5em;
+/* 562 */ }
+/* 563 */ dt:after {
+/* 564 */ 	content:": ";
+/* 565 */ }
+/* 566 */ h1 img {
+/* 567 */     vertical-align: middle;
+/* 568 */ }
+/* 569 */ 
+/* 570 */ #homescreen_layout {
+/* 571 */     float: left;
+/* 572 */ }
+/* 573 */ 
+/* 574 */ #homescreen_layout h2 {
+/* 575 */     font-size: 14px;
+/* 576 */     margin: 0;
+/* 577 */     padding: 4px;
+/* 578 */     -webkit-border-radius: 4px 4px 0 0;
+/* 579 */     -moz-border-radius: 4px 4px 0 0;
+/* 580 */     border-radius: 4px 4px 0 0;
+/* 581 */     background: #eee;
+/* 582 */     border-bottom: 1px solid #999;
+/* 583 */     
+/* 584 */ }
+/* 585 */ 
+/* 586 */ .section_wrapper {
+/* 587 */     padding: 0px;
+/* 588 */     border: 1px solid #999;
+/* 589 */     -webkit-border-radius: 4px;
+/* 590 */     -moz-border-radius: 4px;
+/* 591 */     border-radius: 4px;
+/* 592 */     margin: 0 0 10px 0;
+/* 593 */ }
+/* 594 */ 
+/* 595 */ .springboard {
+/* 596 */ 	margin: 0;
+/* 597 */ 	width: 100%;
+/* 598 */ 	padding: 6px;
+/* 599 */ }
+/* 600 */ 
+
+/* compliant-computer.css */
+
+/* 601 */ .springboard div {
+/* 602 */     cursor: move;
+/* 603 */ 	position: relative;
+/* 604 */ 	margin: 0;
+/* 605 */ 	padding: 8px 5px;
+/* 606 */ 	border: 0;
+/* 607 */ 	float: left;
+/* 608 */ 	text-align: center;		
+/* 609 */ 	vertical-align: top;
+/* 610 */ }
+/* 611 */ 
+/* 612 */ .springboard img {
+/* 613 */ 	height: 50px;
+/* 614 */ 	width: 50px;
+/* 615 */ 	margin-bottom: 1px;
+/* 616 */ }
+/* 617 */ 
+/* 618 */ .springboard .separator {
+/* 619 */ 	display: block;
+/* 620 */ 	width: 100%;
+/* 621 */ 	height: 18px;
+/* 622 */ 	clear:both;
+/* 623 */ 	margin: 0;
+/* 624 */ 	padding: 0;
+/* 625 */ 	float: none;
+/* 626 */ }
+/* 627 */ .springboard .badge img {
+/* 628 */ 	position: absolute;
+/* 629 */ 	right: 12px;
+/* 630 */ 	top: 5px;
+/* 631 */ 	width: 24px;
+/* 632 */ 	height: 24px;
+/* 633 */ 	padding-top: 5px;
+/* 634 */ 	text-align: center;
+/* 635 */ 	color: #fff;
+/* 636 */ 	font-size:70.59%;
+/* 637 */ 	font-weight: bold;
+/* 638 */ 	background-image: url("/device/compliant-computer-unknown/common/images/badge.png");
+/* 639 */ 	background-repeat: no-repeat;
+/* 640 */ }
+/* 641 */ 
+/* 642 */ .springboard .secured {
+/* 643 */ 	position: absolute;
+/* 644 */ 	z-index: 100;
+/* 645 */ 	top: 45px;
+/* 646 */ 	right: 4px;
+/* 647 */ 	width: 18px;
+/* 648 */ 	height: 22px;
+/* 649 */ 	background: url("/device/compliant-computer-unknown/common/images/secured.png") no-repeat;
+/* 650 */ }
+
+/* compliant-computer.css */
+
+/* 651 */ 
+/* 652 */ .springboard .utility .secured {
+/* 653 */ 	top: 28px;
+/* 654 */ 	right: 14px;
+/* 655 */ }
+/* 656 */ 
+/* 657 */ .springboard_clear {
+/* 658 */     clear: left;
+/* 659 */ }
+/* 660 */ 
+/* 661 */ .springboard input {
+/* 662 */     display:block;
+/* 663 */     width: 80px;
+/* 664 */     text-align: center;
+/* 665 */ }
+/* 666 */ 
+/* 667 */ .ui-sortable-helper {
+/* 668 */ }
+/* 669 */ 
+/* 670 */ #message {
+/* 671 */ 	text-align: center;
+/* 672 */ 	font-weight: bold;
+/* 673 */ 	margin: 2px 2px 10px 2px;
+/* 674 */ 	height: 20px;
+/* 675 */ 	padding: 4px 6px;
+/* 676 */ 	line-height: 20px;
+/* 677 */ 	text-decoration: none;
+/* 678 */ 	border: 1px solid #ddd;
+/* 679 */ 	background-color: #eee;
+/* 680 */ 	-webkit-border-radius: 4px;
+/* 681 */ 	-webkit-box-shadow: 1px 1px 3px #999;
+/* 682 */ 	-moz-box-shadow: 1px 1px 3px #999;
+/* 683 */ 	-moz-border-radius: 4px;
+/* 684 */ 	border-radius: 4px;
+/* 685 */ 	color: #88A900;
+/* 686 */ }
+/* 687 */ 
+/* 688 */ #message.errormessage {
+/* 689 */     background-color: #A00;
+/* 690 */     color: white;
+/* 691 */ }
+/* 692 */ 
+/* 693 */ #adminSections {
+/* 694 */     height:30px;
+/* 695 */     margin: 0;
+/* 696 */     padding: 0 0 10px 0;
+/* 697 */     border-bottom: 1px solid #ddd;
+/* 698 */ }
+/* 699 */ 
+/* 700 */ #moduleDescription {
+
+/* compliant-computer.css */
+
+/* 701 */ }
+/* 702 */ 
+/* 703 */ #moduleImage {
+/* 704 */ 	margin-top: -8px;
+/* 705 */ }
+/* 706 */ 
+/* 707 */ #adminSections li {
+/* 708 */     text-align: center;
+/* 709 */     float: left;
+/* 710 */     list-style: none;
+/* 711 */     padding: 0 10px;
+/* 712 */     line-height: 28px;
+/* 713 */ 	margin: 1px;
+/* 714 */ }
+/* 715 */ 
+/* 716 */ #adminSections li.selected {
+/* 717 */     background-color: #e3e3e3;
+/* 718 */ 	border: 1px solid #ccc;
+/* 719 */ 	margin: 0;
+/* 720 */     border-radius: 6px;
+/* 721 */ 	-webkit-border-radius: 6px;
+/* 722 */ 	-moz-border-radius: 6px;
+/* 723 */ }
+/* 724 */ 
+/* 725 */ #adminSections li.common {
+/* 726 */ }
+/* 727 */ 
+/* 728 */ #adminSections li.module {
+/* 729 */ }
+/* 730 */ 
+/* 731 */ #adminSections li.module a {
+/* 732 */     color: black;
+/* 733 */     font-weight: bold;
+/* 734 */ }
+/* 735 */ 
+/* 736 */ #adminSections li.hidden {
+/* 737 */ /*    display: none; */
+/* 738 */ }
+/* 739 */ 
+/* 740 */ #adminFields li.hidden {
+/* 741 */     margin: 0;
+/* 742 */     visibility: hidden;
+/* 743 */ }
+/* 744 */ 
+/* 745 */ #adminSections li a {
+/* 746 */     text-decoration:none;
+/* 747 */     display: block;
+/* 748 */ }
+/* 749 */ 
+/* 750 */ #adminSections li.selected a {
+
+/* compliant-computer.css */
+
+/* 751 */ 	color: #000;
+/* 752 */ }
+/* 753 */ 
+/* 754 */ .sectionsnone {
+/* 755 */     font-weight: bold;
+/* 756 */     text-align: center;
+/* 757 */ }
+/* 758 */ 
+/* 759 */ table .labelfield label {
+/* 760 */     font-weight: bold;
+/* 761 */     top: 0;
+/* 762 */ }
+/* 763 */ 
+/* 764 */ a.formbutton {
+/* 765 */   cursor: default;
+/* 766 */ 	text-align: center;
+/* 767 */ 	display: inline-block;
+/* 768 */ 	padding-right: 7px;
+/* 769 */ 	background-image: url("/device/compliant-computer-unknown/common/images/button-sd-r.png");
+/* 770 */ 	background-repeat: no-repeat;
+/* 771 */ 	background-position: right;
+/* 772 */ 	margin: 0 5px;
+/* 773 */ 	height: 36px;
+/* 774 */ 	text-decoration: none;
+/* 775 */ }
+/* 776 */ 
+/* 777 */ a.formbutton div {
+/* 778 */ 	display: inline-block;
+/* 779 */ 	color: #fff;
+/* 780 */ 	font-weight: bold;
+/* 781 */ 	font-size: 94.12%;
+/* 782 */ 	line-height: 26px;  /* height minus padding */
+/* 783 */ 	text-decoration: none;
+/* 784 */ 	padding: 5px 5px 5px 12px;
+/* 785 */ 	background-image: url("/device/compliant-computer-unknown/common/images/button-sd-l.png");
+/* 786 */ 	background-repeat: no-repeat;
+/* 787 */ 	background-position: left;
+/* 788 */ 	text-decoration: none;
+/* 789 */ }
+/* 790 */ 
+/* 791 */ fieldset {
+/* 792 */     border: 1px solid #ddd;
+/* 793 */     border-radius: 4px;
+/* 794 */     -moz-border-radius: 4px;
+/* 795 */     margin-bottom: 1.5em;
+/* 796 */     padding: 0;
+/* 797 */ }
+/* 798 */ 
+/* 799 */ fieldset.collapsable {
+/* 800 */     border: none;
+
+/* compliant-computer.css */
+
+/* 801 */ }
+/* 802 */ 
+/* 803 */ .fieldgroup-legend {
+/* 804 */     padding: 4px 6px;
+/* 805 */     font-weight: bold;
+/* 806 */     font-size: 110%;
+/* 807 */ }
+/* 808 */ 
+/* 809 */ 
+/* 810 */ .fieldgroup {
+/* 811 */ }
+/* 812 */ 
+/* 813 */ .fieldgroup-legend {
+/* 814 */ }
+/* 815 */ 
+/* 816 */ .collapsable .fieldgroup-legend {
+/* 817 */     cursor: pointer;
+/* 818 */ 	display: inline-block;
+/* 819 */ 	text-align: center;
+/* 820 */ 	min-width: 50px;
+/* 821 */ 	margin: 2px;
+/* 822 */ 	padding: 4px 6px;
+/* 823 */ 	line-height: 1.2em;
+/* 824 */ 	text-decoration: none;
+/* 825 */ 	border: 1px solid #ddd;
+/* 826 */ 	background-color: #f6f6f6;
+/* 827 */ 	-webkit-border-radius: 4px;
+/* 828 */ 	-moz-border-radius: 4px;
+/* 829 */ 	border-radius: 4px;
+/* 830 */ 	margin-left: 150px;
+/* 831 */     font-size: 100%;
+/* 832 */     font-weight: normal;
+/* 833 */ }
+/* 834 */ 
+/* 835 */ .fieldgroup-description {
+/* 836 */ 	margin-left: 6px;		/* same as width plus padding-right of label */
+/* 837 */ 	display: block;
+/* 838 */ 	padding: 2px 0 0 0px;
+/* 839 */ 	font-size: 85%;
+/* 840 */ 	line-height: 1.33em;
+/* 841 */ 	color: #777;
+/* 842 */ }
+/* 843 */ 
+/* 844 */ .collapsable .fieldgroup-description {
+/* 845 */ 	margin-left: 150px;		/* same as width plus padding-right of label */
+/* 846 */ }
+/* 847 */ 
+/* 848 */ p.blurb	{
+/* 849 */ 	font-size: 20px;
+/* 850 */ 	line-height: 26px;
+
+/* compliant-computer.css */
+
+/* 851 */ 	color: #898989;
+/* 852 */ 	}
+/* 853 */ 
+/* 854 */ input.admin-button	{
+/* 855 */ float: left;
+/* 856 */ width: 150px;
+/* 857 */ margin-right: 20px;
+/* 858 */ }
+/* 859 */ 
+/* 860 */ 
+/* 861 */ 
+
+/* id::themeConfigModTimeChecker */
+
+/* 1 */ 

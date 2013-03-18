@@ -1,0 +1,7 @@
+<strong>Invalid Page Name</strong><br><br><strong>Fatal error</strong>:  Uncaught exception 'KurogoPageNotFoundException' with message 'Invalid Page Name' in C:\xampp\htdocs\Kurogo\lib\WebModule.php:1473
+Stack trace:
+#0 C:\xampp\htdocs\Kurogo\lib\WebModule.php(592): setPage(string)
+#1 C:\xampp\htdocs\Kurogo\lib\WebModule.php(559): init(string, array)
+#2 C:\xampp\htdocs\Kurogo\www\index.php(304): factory(string, string, array)
+#3 {main}
+  thrown in <strong>C:\xampp\htdocs\Kurogo\lib\WebModule.php</strong> on line <strong>1473</strong>

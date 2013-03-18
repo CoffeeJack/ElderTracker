@@ -1,0 +1,834 @@
+
+/* common.js */
+
+/* 1   */ /*
+/* 2   *|  * Copyright © 2010 - 2012 Modo Labs Inc. All rights reserved.
+/* 3   *|  *
+/* 4   *|  * The license governing the contents of this file is located in the LICENSE
+/* 5   *|  * file located at the root directory of this distribution. If the LICENSE file
+/* 6   *|  * is missing, please contact sales@modolabs.com.
+/* 7   *|  *
+/* 8   *|  */
+/* 9   */ 
+/* 10  */ var localizedStrings = {}
+/* 11  */ 
+/* 12  */ $(document).ready(function() {
+/* 13  */     getLocalizedString(['BUTTON_ADD','BUTTON_EDIT','BUTTON_DONE','BUTTON_REMOVE','CONFIG_SAVED','ACTION_RUNNING','ACTION_SUCCESSFUL','ADMIN_SECTION_REMOVE_PROMPT','ADMIN_SECTION_ADD_PROMPT']);            
+/* 14  */     $('#message').hide();
+/* 15  */ });
+/* 16  */ 
+/* 17  */ function getLocalizedString(key) {
+/* 18  */     if (typeof key=='string' && typeof localizedStrings[key] != 'undefined') {
+/* 19  */         return localizedStrings[key];
+/* 20  */     }
+/* 21  */ 
+/* 22  */     makeAPICall('GET', 'admin','getlocalizedstring', { 'v':1, 'key':key}, function(response) {
+/* 23  */         $.each(response, function(k,v) {   
+/* 24  */             localizedStrings[k] = v;
+/* 25  */         });
+/* 26  */ 
+/* 27  */         if (typeof key=='string' && typeof localizedStrings[key] != 'undefined') {
+/* 28  */             return localizedStrings[key];
+/* 29  */         }
+/* 30  */     });
+/* 31  */ }
+/* 32  */ 
+/* 33  */ 
+/* 34  */ function createFormFieldListItems(key, fieldData) {
+/* 35  */     var items = [createFormFieldListItem(key,fieldData)];
+/* 36  */     
+/* 37  */     return items;
+/* 38  */ }
+/* 39  */ 
+/* 40  */ function showIfCheck(element, items, value) {
+/* 41  */     var show = false;
+/* 42  */     var val = $(element).val();
+/* 43  */     if (element.type=='checkbox') {
+/* 44  */         var val = element.checked ? val : '0';
+/* 45  */     }
+/* 46  */     if ($.isArray(value)) {
+/* 47  */         show = ($.inArray(val, value) != -1);
+/* 48  */     } else if (value=='*') {
+/* 49  */         show = val.length>0;
+/* 50  */     } else {
+
+/* common.js */
+
+/* 51  */         show = val == value;
+/* 52  */     }
+/* 53  */ 
+/* 54  */     $(items)[show?'show':'hide']();
+/* 55  */     if (show) {
+/* 56  */         $(items).find(':input').removeAttr('disabled');
+/* 57  */     } else {
+/* 58  */         $(items).find(':input').attr('disabled', 'true');
+/* 59  */     }
+/* 60  */ }
+/* 61  */ 
+/* 62  */ function createFormSectionListItems(section, sectionData) {
+/* 63  */     var items = [];
+/* 64  */     var sectionItems = {};
+/* 65  */     var fieldgroups = {}
+/* 66  */         
+/* 67  */     switch (sectionData.sectiontype)
+/* 68  */     {
+/* 69  */         case 'fields':
+/* 70  */             $.each(sectionData.fields, function(key, data) {
+/* 71  */                 data.section = section;
+/* 72  */                 var _items = createFormFieldListItems(key, data);
+/* 73  */                 sectionItems[key] = _items;
+/* 74  */                 
+/* 75  */                 if (data.fieldgroup) {
+/* 76  */                     if (sectionData.fieldgroups && typeof sectionData.fieldgroups[data.fieldgroup] != 'undefined') {
+/* 77  */                         var groupdata = sectionData.fieldgroups[data.fieldgroup];
+/* 78  */                         if (!fieldgroups[data.fieldgroup]) {
+/* 79  */                             var fieldgroup = $('<fieldset />').attr('id','fieldgroup_' + data.fieldgroup);
+/* 80  */                             fieldgroups[data.fieldgroup] = $('<div class="fieldgroup" />');
+/* 81  */                             if (groupdata.label) {
+/* 82  */                                 var legend = $('<div class="fieldgroup-legend">'+ groupdata.label + '</div>');
+/* 83  */                                 
+/* 84  */                                 if (groupdata.collapsable || groupdata.collapsed) {
+/* 85  */                                     fieldgroup.addClass('collapsable')
+/* 86  */                                     legend.click(function() {
+/* 87  */                                         fieldgroup.toggleClass('collapsed');
+/* 88  */                                         fieldgroups[data.fieldgroup].slideToggle();
+/* 89  */                                     });
+/* 90  */                                 }
+/* 91  */                                 fieldgroup.append(legend);
+/* 92  */                                 if (groupdata.description) {
+/* 93  */                                     fieldgroups[data.fieldgroup].append($('<div class="fieldgroup-description">'+groupdata.description+'</div>'));
+/* 94  */                                 }
+/* 95  */                             }
+/* 96  */                             fieldgroup.append(fieldgroups[data.fieldgroup]);
+/* 97  */                             if (groupdata.collapsed) {
+/* 98  */                                 fieldgroup.addClass('collapsed');
+/* 99  */                                 fieldgroups[data.fieldgroup].hide();
+/* 100 */                             }
+
+/* common.js */
+
+/* 101 */                             $.merge(items, fieldgroup);
+/* 102 */                         }
+/* 103 */                         
+/* 104 */                         fieldgroups[data.fieldgroup].append(_items);
+/* 105 */                     } else {
+/* 106 */                         alert("Fieldgroup " + data.fieldgroup + " not defined.");
+/* 107 */                     }
+/* 108 */                 } else {
+/* 109 */                     $.merge(items, _items);
+/* 110 */                 }
+/* 111 */                 if (data.showIf && data.showIf[0] in sectionData.fields) {
+/* 112 */                     $(sectionItems[data.showIf[0]]).find('.changeElement').change(function() {
+/* 113 */                         showIfCheck(this, _items, data.showIf[1]);
+/* 114 */                     });
+/* 115 */                     showIfCheck($(sectionItems[data.showIf[0]]).find('.changeElement').get(0), _items, data.showIf[1]);
+/* 116 */                 }
+/* 117 */             });
+/* 118 */             break;
+/* 119 */         case 'section':
+/* 120 */             items.push(createFormSectionList(section, sectionData));
+/* 121 */             break;
+/* 122 */         default:
+/* 123 */             //this represents an error in the admin recipe. Should never happen
+/* 124 */             alert('Section type ' + sectionData.sectiontype + ' not handled for section ' + section);
+/* 125 */             
+/* 126 */     }
+/* 127 */     
+/* 128 */     return items;
+/* 129 */ }
+/* 130 */ 
+/* 131 */ function createFormFieldListItem(key, fieldData) {
+/* 132 */     var listClass='formfield';
+/* 133 */     switch (fieldData.type) {
+/* 134 */         case 'checkbox':
+/* 135 */         case 'inversecheckbox':
+/* 136 */             listClass+=' checkitem';
+/* 137 */             break;
+/* 138 */         case 'paragraph':
+/* 139 */         case 'textarea':
+/* 140 */             listClass+=' tallfield';
+/* 141 */             break;
+/* 142 */         case 'label':
+/* 143 */             listClass+=' labelfield';
+/* 144 */             break;
+/* 145 */     }
+/* 146 */ 
+/* 147 */     var li = $('<div>').attr('class', listClass);
+/* 148 */ 
+/* 149 */     if (fieldData.label) {
+/* 150 */         li.append('<label>' + fieldData.label + '</label>');
+
+/* common.js */
+
+/* 151 */     }
+/* 152 */     
+/* 153 */     appendFormField(li, key, fieldData);
+/* 154 */ 
+/* 155 */     if (fieldData.description) {
+/* 156 */         li.append('<span class="helptext">' + fieldData.description + '</span>');
+/* 157 */     }
+/* 158 */ 
+/* 159 */     //return a dom element
+/* 160 */     return li.get(0);
+/* 161 */ }
+/* 162 */ 
+/* 163 */ function appendFormField(parent, key, fieldData) {
+/* 164 */     fieldData.value = 'value' in fieldData ? fieldData.value : ('default' in fieldData ? fieldData['default'] : '');
+/* 165 */     var section = typeof fieldData.section == 'undefined' ? null : fieldData.section;
+/* 166 */     var inputClass = typeof fieldData['class'] == 'undefined' ? '' : fieldData['class'];
+/* 167 */     var id = typeof fieldData.id == 'undefined' ? null : fieldData.id;
+/* 168 */     var disabled = typeof fieldData.enabled == 'undefined' ? '' : (fieldData.enabled ? '' : 'disabled');
+/* 169 */     var re;
+/* 170 */     
+/* 171 */     switch (fieldData.type) {
+/* 172 */     
+/* 173 */         case 'file':
+/* 174 */             var prefixKey = key + '_prefix';
+/* 175 */             if (re = key.match(/(.*)\[(.*)\]/)) {
+/* 176 */                 prefixKey = re[1] + '[' + re[2] + '_prefix]';
+/* 177 */             }
+/* 178 */         
+/* 179 */             parent.append(createSelectBox(fileListTypes(), fieldData.constant).addClass('filePrefix').attr('name', prefixKey).attr('section',section).attr('disabled',disabled));
+/* 180 */             parent.append($('<input/>').attr('type','text').attr('name', key).attr('section', section).attr('value', fieldData.value).addClass('fileData').addClass(inputClass).attr('id',id).attr('disabled',disabled));
+/* 181 */             break;
+/* 182 */         case 'number':
+/* 183 */             var input = $('<input/>').attr('type','text').attr('name', key).attr('section', section).attr('value', fieldData.value).addClass(inputClass).attr('id',id).attr('disabled',disabled);
+/* 184 */             if ('placeholder' in fieldData) {
+/* 185 */                 input.attr('placeholder', fieldData.placeholder)
+/* 186 */             }
+/* 187 */             parent.append(input);
+/* 188 */             break;
+/* 189 */         case 'password':
+/* 190 */         case 'text':
+/* 191 */             var input = $('<input/>').attr('type',fieldData.type).attr('name', key).attr('section', section).attr('value', fieldData.value).addClass(inputClass).attr('id',id).attr('disabled',disabled);
+/* 192 */             if ('placeholder' in fieldData) {
+/* 193 */                 input.attr('placeholder', fieldData.placeholder)
+/* 194 */             }
+/* 195 */             parent.append(input);
+/* 196 */             break;
+/* 197 */         case 'inversecheckbox':
+/* 198 */             parent.append($('<input/>').attr('type','hidden').attr('name', key).attr('section', section).attr('value', '1'));
+/* 199 */             parent.append($('<input/>').attr('type','checkbox').attr('name', key).attr('section', section).attr('value', '0').addClass('changeElement').addClass(inputClass).attr('checked', !parseInt(fieldData.value) ? 'checked':'').attr('id',id).attr('disabled',disabled));
+/* 200 */             break;
+
+/* common.js */
+
+/* 201 */         case 'checkbox':
+/* 202 */             if (fieldData.value.length==0 && fieldData.placeholder) {
+/* 203 */                 fieldData.value = fieldData.placeholder;
+/* 204 */             }
+/* 205 */ 
+/* 206 */             parent.append($('<input/>').attr('type','hidden').attr('name', key).attr('section', section).attr('value', '0'));
+/* 207 */             parent.append($('<input/>').attr('type',fieldData.type).attr('name', key).attr('section', section).attr('value', '1').addClass('changeElement').addClass(inputClass).attr('checked', parseInt(fieldData.value) ? 'checked':'').attr('id',id).attr('disabled',disabled));
+/* 208 */             break;
+/* 209 */         case 'radio':
+/* 210 */             $.each(fieldData.options, function(value,label) {
+/* 211 */                 parent.append($('<input/>').attr('type',fieldData.type).attr('name', key).attr('section', section).attr('value', value).addClass(inputClass).addClass('changeElement').attr('checked', fieldData.value==value).attr('disabled',disabled));
+/* 212 */                 parent.append(label);
+/* 213 */             });
+/* 214 */             break;
+/* 215 */         case 'select':
+/* 216 */             var options = 'options' in fieldData ? fieldData.options : [];
+/* 217 */             if (!fieldData.value && 'placeholder' in fieldData) {
+/* 218 */                 fieldData.value = fieldData.placeholder;
+/* 219 */             }
+/* 220 */             parent.append(createSelectBox(options, fieldData.value).attr('name',key).attr('section', section).addClass('changeElement').addClass(inputClass).attr('id',id).attr('disabled',disabled));
+/* 221 */             break;
+/* 222 */         case 'paragraph':
+/* 223 */         case 'textarea':
+/* 224 */             if (fieldData.rows) {
+/* 225 */                 var rows = fieldData.rows;
+/* 226 */             } else {
+/* 227 */                 var rows = fieldData.type == 'textarea' ? 4: 8;
+/* 228 */             }
+/* 229 */             parent.append($('<textarea>'+(fieldData.value ? fieldData.value : '')+'</textarea>').attr('name',key).attr('rows',rows).attr('section', section).addClass(inputClass).attr('id',id).attr('disabled',disabled));
+/* 230 */             break;
+/* 231 */         case 'label':
+/* 232 */             parent.append('<span class="labeltext">'+fieldData.value+'</span>').attr('disabled',disabled);
+/* 233 */             break;
+/* 234 */         case 'link':
+/* 235 */             if (fieldData.value) {
+/* 236 */                 parent.append('<a href="'+ fieldData.value +'">'+fieldData.value+'</a>');
+/* 237 */             }
+/* 238 */             break;
+/* 239 */         
+/* 240 */         case 'hidden':
+/* 241 */             parent.append($('<input/>').attr('type',fieldData.type).attr('name', key).attr('section', section).attr('value', fieldData.value).addClass(inputClass).attr('id',id)).addClass('hidden');
+/* 242 */             break;
+/* 243 */             
+/* 244 */         case 'action':
+/* 245 */             if (fieldData.dynamicParams) {
+/* 246 */                 if (typeof fieldData.params == 'undefined') {
+/* 247 */                     fieldData.params = {}
+/* 248 */                 }
+/* 249 */ 
+/* 250 */                 for (param in fieldData.dynamicParams) {
+
+/* common.js */
+
+/* 251 */                     switch (fieldData.dynamicParams[param])
+/* 252 */                     {
+/* 253 */                         case 'moduleID':
+/* 254 */                             fieldData.params.module = moduleID;
+/* 255 */                             break;
+/* 256 */                     }
+/* 257 */                 }
+/* 258 */             }
+/* 259 */         
+/* 260 */             parent.append($('<a class="formbutton"">').append($('<div>').html(fieldData.value).attr('disabled',disabled)).click(function() {
+/* 261 */                 showMessage(fieldData.runningMessage ? fieldData.runningMessage : getLocalizedString('ACTION_RUNNING'), false, true);
+/* 262 */                 makeAPICall('GET','admin',fieldData.action, fieldData.params, function() { 
+/* 263 */                     showMessage(fieldData.message ? fieldData.message : getLocalizedString('ACTION_SUCCESSFUL'));
+/* 264 */                 });
+/* 265 */             }));
+/* 266 */             break;
+/* 267 */         case 'upload':
+/* 268 */             var input = $('<input/>').attr('type','file').attr('name', key).attr('section', section).addClass(inputClass).attr('id',id).attr('disabled',disabled);
+/* 269 */             parent.append(input);
+/* 270 */             break;
+/* 271 */         default:
+/* 272 */             //this represents an error in the admin recipe. Should never happen
+/* 273 */             alert("Don't know how to handle field of type '" + fieldData.type + "' for key '" + key +"'");
+/* 274 */             break;
+/* 275 */     }
+/* 276 */ }
+/* 277 */ 
+/* 278 */ function stopSectionEditing(titleField) {
+/* 279 */     if (titleField) {
+/* 280 */         $('.editing .sectiontitle').html($('.editing .editrow input[name*="['+titleField+']"]').val());
+/* 281 */     }
+/* 282 */     $('.editing').removeClass('editing');
+/* 283 */ }
+/* 284 */ 
+/* 285 */ function createSectionListRow(section, data, sectionID, sectionData) {
+/* 286 */     var row;
+/* 287 */     
+/* 288 */     //use TITLE if present
+/* 289 */     var titleField = 'sectiontitlefield' in data ? data.sectiontitlefield : 'TITLE';
+/* 290 */     
+/* 291 */     var title = titleField in sectionData ? sectionData[titleField] : '';
+/* 292 */     
+/* 293 */     if (data.sectiontable) {
+/* 294 */ 
+/* 295 */         row = $('<tr />').attr('sectionID',sectionID);
+/* 296 */         if (data.sectionreorder) {
+/* 297 */             row.append($('<td />').addClass('handle'));
+/* 298 */         }
+/* 299 */         $.each(data.fields, function(field, _fieldData) {
+/* 300 */             var cell = $('<td />');
+
+/* common.js */
+
+/* 301 */             var fieldData = jQuery.extend(true, {}, _fieldData);
+/* 302 */     
+/* 303 */             if (typeof sectionData[field] != 'undefined') {
+/* 304 */                 if ($.isArray(sectionData[field])) {
+/* 305 */                     if (fieldData.type=='file') {
+/* 306 */                         fieldData.constant = sectionData[field][0];
+/* 307 */                         fieldData.value = sectionData[field][1];
+/* 308 */                     } else {
+/* 309 */                         fieldData.value = sectionData[field][2];
+/* 310 */                     }
+/* 311 */                 } else {
+/* 312 */                     fieldData.value = sectionData[field];
+/* 313 */                 }
+/* 314 */             }
+/* 315 */             if (field=='section') {
+/* 316 */                 fieldData.value = sectionID;
+/* 317 */             }
+/* 318 */             fieldData.section = section;
+/* 319 */             fieldName = sectionID +'['+field+']';
+/* 320 */             appendFormField(cell, fieldName, fieldData);
+/* 321 */             row.append(cell);
+/* 322 */         });
+/* 323 */         var rowbuttons = $('<td class="rowbuttons" />');
+/* 324 */     
+/* 325 */     } else {
+/* 326 */     
+/* 327 */         var row = $('<li />').attr('sectionID',sectionID).addClass('formfield');
+/* 328 */         var listhead = $('<div class="edithead" />');
+/* 329 */         row.append(listhead);
+/* 330 */ 
+/* 331 */         if (data.sectionreorder) {
+/* 332 */             listhead.append($('<div />').addClass('handle'));
+/* 333 */         }
+/* 334 */ 
+/* 335 */         if (data.sectionindex =='string') {
+/* 336 */             listhead.append($('<span class="sectionid" />').html(sectionID));
+/* 337 */         }
+/* 338 */ 
+/* 339 */         listhead.append($('<span class="sectiontitle" />').html(title));
+/* 340 */     
+/* 341 */         var rowbuttons = $('<div class="rowbuttons" />');
+/* 342 */     
+/* 343 */         rowbuttons.append($('<a href="" class="textbutton edit">'+ getLocalizedString('BUTTON_EDIT') + '</a>').click(function() {
+/* 344 */             stopSectionEditing(titleField);
+/* 345 */             $(this).closest('.formfield').addClass('editing');
+/* 346 */             return false;
+/* 347 */         }));
+/* 348 */     }
+/* 349 */ 
+/* 350 */     rowbuttons.append($("<input />").attr('type','hidden').addClass('sectionorder').attr('name','sectionorder['+section+'][]').attr('value',sectionID));
+
+/* common.js */
+
+/* 351 */ 
+/* 352 */     if (data.sectiondelete) {
+/* 353 */         rowbuttons.append($('<a href="" class="textbutton delete">'+ getLocalizedString('BUTTON_REMOVE') +'</a>').click(function() {
+/* 354 */             if ($(this).closest('.formfield').hasClass('notsaved')) {
+/* 355 */                 reloadSection();
+/* 356 */                 return false;
+/* 357 */             }
+/* 358 */             
+/* 359 */             if (confirm(getLocalizedString('ADMIN_SECTION_REMOVE_PROMPT'))) {
+/* 360 */ 
+/* 361 */                 params = {
+/* 362 */                     v: '1',
+/* 363 */                     type: adminType,
+/* 364 */                     section: section,
+/* 365 */                     key: sectionID
+/* 366 */                 }
+/* 367 */                 
+/* 368 */                 switch (adminType) 
+/* 369 */                 {
+/* 370 */                     case 'site':
+/* 371 */                         params.section = adminSection;
+/* 372 */                         if (adminSubsection) {
+/* 373 */                             params.subsection = adminSubsection;
+/* 374 */                         }
+/* 375 */                         break;
+/* 376 */                     case 'module':
+/* 377 */                         params.module = moduleID;
+/* 378 */                         break;
+/* 379 */                 }
+/* 380 */                 
+/* 381 */                 var button = this;
+/* 382 */                 
+/* 383 */                 makeAPICall('GET', 'admin','removeconfigsection', params, function() {
+/* 384 */                    reloadSection();
+/* 385 */                 });
+/* 386 */ 
+/* 387 */             }
+/* 388 */             return false;
+/* 389 */         }));
+/* 390 */         
+/* 391 */     }
+/* 392 */     
+/* 393 */     if (data.sectiontable) {
+/* 394 */         row.append(rowbuttons);
+/* 395 */     } else {
+/* 396 */         listhead.append(rowbuttons);
+/* 397 */         var editrow = $('<div class="editrow" />');
+/* 398 */         var list = $('<div class="formfields" />');
+/* 399 */         var items = [];
+/* 400 */         var fieldgroups = {}
+
+/* common.js */
+
+/* 401 */         
+/* 402 */         $.each(data.fields, function(field, _fieldData) {
+/* 403 */             var fieldData = jQuery.extend(true, {}, _fieldData);
+/* 404 */     
+/* 405 */             if (typeof sectionData[field] != 'undefined') {
+/* 406 */                 if ($.isArray(sectionData[field])) {
+/* 407 */                     if (fieldData.type=='file') {
+/* 408 */                         fieldData.constant = sectionData[field][0];
+/* 409 */                         fieldData.value = sectionData[field][1];
+/* 410 */                     } else {
+/* 411 */                         fieldData.value = sectionData[field][2];
+/* 412 */                     }
+/* 413 */                 } else {
+/* 414 */                     fieldData.value = sectionData[field];
+/* 415 */                 }
+/* 416 */             }
+/* 417 */             if (field=='section') {
+/* 418 */                 fieldData.value = sectionID;
+/* 419 */             }
+/* 420 */             fieldData.section = section;
+/* 421 */             fieldName = sectionID +'['+field+']';
+/* 422 */             var item = createFormFieldListItem(fieldName, fieldData);
+/* 423 */             items[field] = item;
+/* 424 */             
+/* 425 */             if (fieldData.fieldgroup) {
+/* 426 */                 var groupname = fieldData.fieldgroup;
+/* 427 */                 if (data.fieldgroups && typeof data.fieldgroups[groupname] != 'undefined') {
+/* 428 */                     var groupdata = data.fieldgroups[groupname];
+/* 429 */                     if (!fieldgroups[groupname]) {
+/* 430 */                         var fieldgroup = $('<fieldset />');
+/* 431 */                         fieldgroups[groupname] = $('<div class="fieldgroup" />');
+/* 432 */                         if (groupdata.label) {
+/* 433 */                             var legend = $('<div class="fieldgroup-legend">'+ groupdata.label + '</div>');
+/* 434 */                             if (groupdata.collapsable || groupdata.collapsed) {
+/* 435 */                                 fieldgroup.addClass('collapsable')
+/* 436 */                                 legend.click(function() {
+/* 437 */                                     fieldgroup.toggleClass('collapsed');
+/* 438 */                                     fieldgroups[fieldData.fieldgroup].slideToggle();
+/* 439 */                                 });
+/* 440 */                             }
+/* 441 */ 
+/* 442 */                             fieldgroup.append(legend);
+/* 443 */                             if (groupdata.description) {
+/* 444 */                                 fieldgroups[groupname].append($('<div class="fieldgroup-description">'+groupdata.description+'</div>'));
+/* 445 */                             }
+/* 446 */                         }
+/* 447 */                         fieldgroup.append(fieldgroups[groupname]);
+/* 448 */                         if (groupdata.collapsed) {
+/* 449 */                             fieldgroup.addClass('collapsed');
+/* 450 */                             fieldgroups[groupname].hide();
+
+/* common.js */
+
+/* 451 */                         }
+/* 452 */                         list.append(fieldgroup);
+/* 453 */                     }
+/* 454 */                     
+/* 455 */                     fieldgroups[groupname].append(item);
+/* 456 */                 } else {
+/* 457 */                     alert("Fieldgroup " + groupname + " not defined.");
+/* 458 */                 }
+/* 459 */             }  else {
+/* 460 */                 list.append(item);
+/* 461 */             }
+/* 462 */             
+/* 463 */             if (fieldData.showIf && fieldData.showIf[0] in data.fields) {
+/* 464 */                 $(items[fieldData.showIf[0]]).find('.changeElement').change(function() {
+/* 465 */                     showIfCheck(this, item, fieldData.showIf[1]);
+/* 466 */                 });
+/* 467 */                 showIfCheck($(items[fieldData.showIf[0]]).find('.changeElement'), item, fieldData.showIf[1]);
+/* 468 */             }
+/* 469 */         });
+/* 470 */         editrow.append(list);
+/* 471 */         var div = $('<div class="rowbuttons" />');
+/* 472 */         div.append($('<a href="" class="textbutton save">'+getLocalizedString('BUTTON_DONE')+'</a>').click(function() {
+/* 473 */             stopSectionEditing(titleField);
+/* 474 */             return false;
+/* 475 */         }));
+/* 476 */         editrow.append(div);
+/* 477 */         row.append(editrow);
+/* 478 */         
+/* 479 */     }
+/* 480 */     return row;
+/* 481 */ }
+/* 482 */ 
+/* 483 */ function createFormSectionList(section, data) {
+/* 484 */     //create main list item
+/* 485 */     var li = $('<div>').attr('class', 'tallfield');
+/* 486 */     
+/* 487 */     if (data.sectiontable) {
+/* 488 */         var table = $('<table />').attr('id', section).addClass('subtable');
+/* 489 */         var head = '<thead><tr>';
+/* 490 */         if (data.sectionreorder) {
+/* 491 */             head+='<th />';
+/* 492 */         }
+/* 493 */         $.each(data.fields, function(key, fieldData) {
+/* 494 */             head+='<th>' + fieldData.label + '</th>';
+/* 495 */         });
+/* 496 */         if (data.sectiondelete) {
+/* 497 */             head+='<th></th>';
+/* 498 */         }
+/* 499 */         table.append(head + '</thead');
+/* 500 */         var body = $('<tbody>');
+
+/* common.js */
+
+/* 501 */         table.append(body);
+/* 502 */         li.append(table);
+/* 503 */     } else {
+/* 504 */         var body = $('<ul>').addClass('sublist').addClass(data.sectionindex);
+/* 505 */         li.append(body);
+/* 506 */     }
+/* 507 */ 
+/* 508 */     //go through each item in the sections array
+/* 509 */     $.each(data.sections, function(sectionID, sectionData) {
+/* 510 */         $.each(createSectionListRow(section, data, sectionID, sectionData), function(i,row) {
+/* 511 */             body.append(row);
+/* 512 */         });
+/* 513 */     });
+/* 514 */     
+/* 515 */     if (data.sections.length==0 && data.sectionsnone) {
+/* 516 */         li.append('<div class="sectionsnone">' + data.sectionsnone + '</div>');
+/* 517 */     }
+/* 518 */     
+/* 519 */     //add the "Add" button if specified
+/* 520 */     if (data.sectionaddnew) {
+/* 521 */         var div = $('<div class="tablebuttons" />');
+/* 522 */         div.append($('<a href="" class="textbutton add">'+getLocalizedString('BUTTON_ADD') +'</span>').click(function() {
+/* 523 */             stopSectionEditing();
+/* 524 */             var sectionID;
+/* 525 */             if (data.sectionindex =='numeric') {
+/* 526 */                 sectionID = data.sections.length;
+/* 527 */             } else {
+/* 528 */                 var sectionaddprompt = 'sectionaddprompt' in data ? data.sectionaddprompt : getLocalizedString('ADMIN_SECTION_ADD_PROMPT');
+/* 529 */                 if (!(sectionID = prompt(sectionaddprompt))) {
+/* 530 */                     return false;
+/* 531 */                 }
+/* 532 */             }
+/* 533 */             
+/* 534 */             var sectionData = { }
+/* 535 */             var row = createSectionListRow(section, data, sectionID, sectionData);
+/* 536 */             body.append(row);
+/* 537 */             row.addClass('notsaved');
+/* 538 */             if (!data.sectiontable) {
+/* 539 */                 $(".sectionsnone").hide();
+/* 540 */                 row.addClass('editing');
+/* 541 */             }
+/* 542 */ 
+/* 543 */             return false;
+/* 544 */         }));
+/* 545 */         li.append(div);
+/* 546 */     }
+/* 547 */     
+/* 548 */     if (data.sectionreorder) {
+/* 549 */         body.sortable({
+/* 550 */             opacity: 0.6,
+
+/* common.js */
+
+/* 551 */             handle: '.handle'
+/* 552 */         });
+/* 553 */     }
+/* 554 */     
+/* 555 */ 
+/* 556 */     return li;
+/* 557 */ }
+/* 558 */ 
+/* 559 */ function createSelectBox(options, selected) {
+/* 560 */     var select = $('<select>');
+/* 561 */     $.each(options, function(k,v) {
+/* 562 */         select.append($("<option>" + v + "</option>").attr('value', k).attr('selected', selected==k ? 'selected' :''));
+/* 563 */     });
+/* 564 */     return select;
+/* 565 */ }
+/* 566 */ 
+/* 567 */ function fileListTypes() {  
+/* 568 */     return {'':'-','FULL_URL_BASE':'FULL_URL_BASE','LOG_DIR':'LOG_DIR','LIB_DIR':'LIB_DIR','CACHE_DIR':'CACHE_DIR','DATA_DIR':'DATA_DIR','SITE_DIR':'SITE_DIR','ROOT_DIR':'ROOT_DIR'};
+/* 569 */ }
+/* 570 */ 
+/* 571 */ function showMessage(message, error, keep) {
+/* 572 */     if (error) {
+/* 573 */         $('#message').addClass('errormessage');
+/* 574 */     } else {
+/* 575 */         $('#message').removeClass('errormessage');
+/* 576 */     }
+/* 577 */ 
+/* 578 */     $('#message').html(message).slideDown('fast');
+/* 579 */     
+/* 580 */     if (!error && !keep) {
+/* 581 */         $('#message').delay(3000).slideUp('slow');
+/* 582 */     }
+/* 583 */ }
+/* 584 */ 
+/* 585 */ function makeAPICall(type, module, command, data, callback) {
+/* 586 */     var url = URL_BASE + 'rest/' + module + '/' + command;
+/* 587 */     $.ajax({
+/* 588 */         type: type,
+/* 589 */         url: url,
+/* 590 */         data: data, 
+/* 591 */         dataType: 'json',
+/* 592 */         success: function(data, textStatus, jqXHR) {
+/* 593 */             if (data.error) {
+/* 594 */                 alert(data.error.message);
+/* 595 */                return;
+/* 596 */             }
+/* 597 */                     
+/* 598 */             if (callback) {
+/* 599 */                 callback(data.response);
+/* 600 */             }
+
+/* common.js */
+
+/* 601 */         },
+/* 602 */         error: function(jqXHR, textStatus, errorThrown) {
+/* 603 */         }
+/* 604 */     });
+/* 605 */ }
+/* 606 */ 
+
+;
+/* modules-common.js */
+
+/* 1   */ /*
+/* 2   *|  * Copyright © 2010 - 2012 Modo Labs Inc. All rights reserved.
+/* 3   *|  *
+/* 4   *|  * The license governing the contents of this file is located in the LICENSE
+/* 5   *|  * file located at the root directory of this distribution. If the LICENSE file
+/* 6   *|  * is missing, please contact sales@modolabs.com.
+/* 7   *|  *
+/* 8   *|  */
+/* 9   */ 
+/* 10  */ var adminType='module';    
+/* 11  */ $(document).ready(function() {
+/* 12  */     $('#adminCancel').click(function(e) {
+/* 13  */         window.location.reload();
+/* 14  */     });
+/* 15  */     
+/* 16  */     if (typeof moduleID != 'undefined') {
+/* 17  */        reloadSection();
+/* 18  */     
+/* 19  */         $('#adminForm').submit(function(e) {
+/* 20  */             var params = { 'v':1, 'type':'module', 'module':moduleID, 'data':{}};
+/* 21  */             var re;
+/* 22  */             
+/* 23  */             $('#adminForm [section]').map(function() { 
+/* 24  */                 var section = $(this).attr('section');
+/* 25  */                 if (typeof params.data[section] == 'undefined') {
+/* 26  */                     params.data[section] = {};
+/* 27  */                 }
+/* 28  */ 
+/* 29  */                 if ( !this.disabled &&  (this.type !='checkbox' || this.checked)) {
+/* 30  */                     if (re = $(this).attr('name').match(/(.*)\[(.*)\]/)) {
+/* 31  */                         if (typeof params.data[section][re[1]]=='undefined') {
+/* 32  */                             params.data[section][re[1]] = {}
+/* 33  */                         }
+/* 34  */                         params.data[section][re[1]][re[2]] = $(this).val();                    
+/* 35  */                     } else {
+/* 36  */                         params.data[section][$(this).attr('name')] = $(this).val();
+/* 37  */                     }
+/* 38  */                 }
+/* 39  */             });
+/* 40  */             
+/* 41  */             $('#adminForm .sectionorder').map(function() { 
+/* 42  */                 if (!('sectionorder' in params)) {
+/* 43  */                     params.sectionorder = {}
+/* 44  */                 }
+/* 45  */                 if (re = $(this).attr('name').match(/sectionorder\[(.*?)\]/)) {
+/* 46  */                     if (!(re[1] in params.sectionorder)) {
+/* 47  */                         params.sectionorder[re[1]] = [];
+/* 48  */                     }
+/* 49  */                     params.sectionorder[re[1]].push($(this).val());
+/* 50  */                 }
+
+/* modules-common.js */
+
+/* 51  */             });
+/* 52  */ 
+/* 53  */             makeAPICall('POST','admin','setconfigdata', params, function() { 
+/* 54  */                 showMessage(getLocalizedString('CONFIG_SAVED'));
+/* 55  */                 reloadSection();
+/* 56  */ 
+/* 57  */             });
+/* 58  */             return false;
+/* 59  */         });
+/* 60  */     } else {
+/* 61  */         //overview
+/* 62  */         $('#homescreen_layout .springboard').sortable({
+/* 63  */             connectWith: ".springboard",
+/* 64  */             opacity: 0.6,
+/* 65  */             update: function() {
+/* 66  */                 updateModuleLayoutSections();
+/* 67  */             }
+/* 68  */         }).disableSelection();
+/* 69  */ 
+/* 70  */         $('#addNewModule').click(function(e) {
+/* 71  */             e.preventDefault();
+/* 72  */             var params = { 'v':1 }
+/* 73  */             
+/* 74  */             params.newModule = {
+/* 75  */                 title: $('#newModuleTitle').val(),
+/* 76  */                 id: $('#newModuleID').val(),
+/* 77  */                 config: $('#newModuleConfig').val(),
+/* 78  */                 disabled: $('#newModuleDisabled').checked ? 1 : 0,
+/* 79  */                 secure: $('#newModuleSecure').checked ? 1 : 0,
+/* 80  */                 search: $('#newModuleSearch').checked ? 1 : 0
+/* 81  */             }
+/* 82  */             
+/* 83  */             makeAPICall('POST','admin','addNewModule', params, function() { window.location = 'modules?module=' + params.newModule.config});
+/* 84  */             return false;
+/* 85  */         });
+/* 86  */         
+/* 87  */         $('.removeModule').click(function(e) {
+/* 88  */             e.preventDefault();
+/* 89  */             var re;
+/* 90  */             var params = { 'v':1 }
+/* 91  */             if (re = e.currentTarget.id.match(/removeModule_(.*)/)) {
+/* 92  */                 params.configModule = re[1];
+/* 93  */                 if (confirm('Are you sure you want to remove all configuration for ' + re[1] + '? This will make this module completely unavailable.')) {
+/* 94  */                     makeAPICall('POST','admin','removeModule', params, function() { window.location.reload()});
+/* 95  */                 }
+/* 96  */             }
+/* 97  */         });
+/* 98  */     
+/* 99  */         $('#adminForm.homescreen').submit(function(e) {
+/* 100 */             var params = { 'v':1, 'data':{}};
+
+/* modules-common.js */
+
+/* 101 */             var re;
+/* 102 */             
+/* 103 */             $('#adminForm input[section]').map(function() { 
+/* 104 */                 var section = $(this).attr('section');
+/* 105 */                 if (section) {
+/* 106 */                     if (typeof params.data[section] == 'undefined') {
+/* 107 */                         params.data[section] = {};
+/* 108 */                     }
+/* 109 */     
+/* 110 */                     params.data[section][$(this).attr('name')] = $(this).val();
+/* 111 */                 }
+/* 112 */             });
+/* 113 */   
+/* 114 */             makeAPICall('POST','admin','setmodulelayout', params, function() { showMessage(getLocalizedString('CONFIG_SAVED')) });
+/* 115 */             return false;
+/* 116 */         });
+/* 117 */         
+/* 118 */         $('#adminForm.overview').submit(function(e) {
+/* 119 */             var params = { 'v':1, 'type':'module', 'section':'overview', 'data':{}};
+/* 120 */             var re;
+/* 121 */             var formValues = {};
+/* 122 */             $.each($(this).serializeArray(), function(index,value) {
+/* 123 */                 if (re = value.name.match(/(.*)\[(.*)\]/)) {
+/* 124 */                     if (typeof params.data[re[1]]=='undefined') {
+/* 125 */                         params.data[re[1]] = {}
+/* 126 */                     }
+/* 127 */                     params.data[re[1]][re[2]] = $(this).val();                    
+/* 128 */                 }
+/* 129 */             });
+/* 130 */ 
+/* 131 */             makeAPICall('POST','admin','setconfigdata', params, function() { showMessage(getLocalizedString('CONFIG_SAVED')) });
+/* 132 */             return false;
+/* 133 */         });
+/* 134 */     }
+/* 135 */     
+/* 136 */ });
+/* 137 */ 
+/* 138 */ function updateModuleLayoutSections() {
+/* 139 */     $('.springboard input').each(function(i) { $(this).attr('section', $(this).parents('.springboard').attr('section')) });
+/* 140 */ }
+/* 141 */ 
+/* 142 */ function selectSection(section) {
+/* 143 */     adminSection=section;
+/* 144 */     reloadSection();
+/* 145 */ }
+/* 146 */ 
+/* 147 */ function reloadSection() {
+/* 148 */     makeAPICall('GET', 'admin','getconfigsections', { 'v':1,'type':'module','module':moduleID}, processModuleSections);
+/* 149 */     makeAPICall('GET', 'admin','getconfigdata', { 'v':1,'type':'module','module':moduleID,'section':adminSection}, processModuleData); 
+/* 150 */ }
+
+/* modules-common.js */
+
+/* 151 */ 
+/* 152 */ function processModuleSections(data) {
+/* 153 */     $("#adminSections").html('');
+/* 154 */     $.each(data, function(section, sectionData) {
+/* 155 */         var li = $('<li />').append('<a href="?module='+moduleID+'&section='+section+'">'+sectionData.title+'</a>').addClass(sectionData.type).click(function() {
+/* 156 */             $('#adminSections .selected').removeClass('selected');
+/* 157 */             $(this).addClass('selected');
+/* 158 */             selectSection(section);
+/* 159 */             return false;
+/* 160 */         });
+/* 161 */         if (section==adminSection) {
+/* 162 */             li.addClass('selected');
+/* 163 */         }
+/* 164 */         $("#adminSections").append(li);
+/* 165 */     });
+/* 166 */ }
+/* 167 */     
+/* 168 */ function processModuleData(data) {
+/* 169 */     $('#moduleDescription').html(data.description);
+/* 170 */     $("#adminFields").html('');
+/* 171 */     $.each(createFormSectionListItems(data.section, data), function(k,element) {
+/* 172 */         $("#adminFields").append(element);
+/* 173 */     });
+/* 174 */ }
+/* 175 */     
+/* 176 */ 

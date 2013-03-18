@@ -1,0 +1,15 @@
+<strong>Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 87 "// google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "</strong><br><br><strong>Fatal error</strong>:  Uncaught exception 'SmartyCompilerException' with message 'Syntax Error in template "C:\\xampp\\htdocs\\Kurogo\\site\\eldertracker\\app\\modules\\hello\\templates\\index.tpl"  on line 87 "// google.load('visualization', '1.0', {'packages':['corechart']});"  - Unexpected ":", expected one of: "}" , " "' in C:\xampp\htdocs\Kurogo\lib\smarty\sysplugins\smarty_internal_templatecompilerbase.php:431
+Stack trace:
+#0 C:\xampp\htdocs\Kurogo\lib\smarty\sysplugins\smarty_internal_templateparser.php(2855): trigger_template_error()
+#1 C:\xampp\htdocs\Kurogo\lib\smarty\sysplugins\smarty_internal_templateparser.php(2920): yy_syntax_error(integer, string)
+#2 C:\xampp\htdocs\Kurogo\lib\smarty\sysplugins\smarty_internal_smartytemplatecompiler.php(51): doParse(integer, string)
+#3 C:\xampp\htdocs\Kurogo\lib\smarty\sysplugins\smarty_internal_templatecompilerbase.php(82): doCompile(string)
+#4 C:\xampp\htdocs\Kurogo\lib\smarty\sysplugins\smarty_internal_template.php(260): compileTemplate(object)
+#5 C:\xampp\htdocs\Kurogo\lib\smarty\sysplugins\smarty_internal_template.php(422): compileTemplateSource()
+#6 C:\xampp\htdocs\Kurogo\lib\smarty\sysplugins\smarty_internal_template.php(567): renderTemplate()
+#7 C:\xampp\htdocs\Kurogo\lib\smarty\Smarty.class.php(336): getRenderedTemplate()
+#8 C:\xampp\htdocs\Kurogo\lib\TemplateEngine.php(433): fetch(string, NULL, NULL)
+#9 C:\xampp\htdocs\Kurogo\lib\WebModule.php(1878): fetchForDevice(string)
+#10 C:\xampp\htdocs\Kurogo\www\index.php(306): displayPage()
+#11 {main}
+  thrown in <strong>C:\xampp\htdocs\Kurogo\lib\smarty\sysplugins\smarty_internal_templatecompilerbase.php</strong> on line <strong>431</strong>
