@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2013-03-17 20:02:37
+<?php /* Smarty version Smarty-3.0.7, created on 2013-04-03 02:29:04
          compiled from "findInclude:common/templates/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:136295146599d8d4020-30736259%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:19225515bcc30ddc477-89713093%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '84aa7bebb379a8b294a029ad3ca0fe7f9594aef1' => 
     array (
       0 => 'findInclude:common/templates/header.tpl',
-      1 => 1363564885,
+      1 => 1364970528,
       2 => 'findInclude',
     ),
   ),
-  'nocache_hash' => '136295146599d8d4020-30736259',
+  'nocache_hash' => '19225515bcc30ddc477-89713093',
   'function' => 
   array (
   ),
@@ -202,17 +202,7 @@ common/images/icon.png" />
 
     <script>
     
-    var map;
-
-    function initialize(center)
-    {
-      var mapProp = {
-        center:center,
-        zoom:20,
-        mapTypeId:google.maps.MapTypeId.ROADMAP
-      };
-      map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
+    
 
     //google.maps.event.addDomListener(window, 'load', initialize);
     </script>

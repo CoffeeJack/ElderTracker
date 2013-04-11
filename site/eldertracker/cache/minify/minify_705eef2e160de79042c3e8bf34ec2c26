@@ -1715,7 +1715,7 @@ symlinks : array (
 /* 6   */ body {
 /* 7   */ 	/* Site-wide page background color, and base font family, size and line spacing */
 /* 8   */ 	background-color: #FFFFFF;
-/* 9   */ 	background-image: url("/device/compliant-computer-unknown/common/images/macgyver.jpg");
+/* 9   */ 	background-image: @@@body_background_image@@@;
 /* 10  */ 	font: 17px/1.33em Helvetica Neue, Helvetica, Arial, sans-serif;
 /* 11  */ }
 /* 12  */ 

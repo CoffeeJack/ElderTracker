@@ -2,116 +2,258 @@
 /* common.js */
 
 /* 1   */ var range_limit = 40;
-/* 2   */ 
-/* 3   */ function getLocationData(){
-/* 4   */ 
-/* 5   */ 	var params = {probe:"locationprobe"};
-/* 6   */ 
-/* 7   */ 	makeAPICall('POST','hello','getdata',params,function(res){
-/* 8   */ 
-/* 9   */ 		var xy = JSON.parse(res);
-/* 10  */ 
-/* 11  */ 		//console.log(xy[xy.length-1]);
-/* 12  */ 
-/* 13  */ 		current_lat = xy[xy.length-1].lat;
-/* 14  */ 		current_lng = xy[xy.length-1].lng;
+/* 2   */ var map;
+/* 3   */ 
+/* 4   */ function initialize(center)
+/* 5   */ {
+/* 6   */   var mapProp = {
+/* 7   */     center:center,
+/* 8   */     zoom:15,
+/* 9   */     mapTypeId:google.maps.MapTypeId.ROADMAP
+/* 10  */   };
+/* 11  */   map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+/* 12  */ }
+/* 13  */ 
+/* 14  */ function getLocationData(){
 /* 15  */ 
-/* 16  */ 		if(MyMarker) MyMarker.setMap(null);
-/* 17  */ 		MyMarker = new google.maps.Marker({
-/* 18  */ 		    position:new google.maps.LatLng(current_lat,current_lng),
-/* 19  */ 		    animation:google.maps.Animation.BOUNCE
-/* 20  */ 		});
-/* 21  */ 		MyMarker.setMap(map);
-/* 22  */ 
-/* 23  */ 		var distance = getDistance();
-/* 24  */ 
-/* 25  */ 		$('#distance').empty();
-/* 26  */ 		$('#distance').append("Distance from Home: "+distance+"m");
-/* 27  */ 
-/* 28  */ 		if(distance > range_limit){
-/* 29  */ 			//alert owner
-/* 30  */ 			$('#distance').css("background-color","red");
-/* 31  */ 
-/* 32  */ 		}else{
-/* 33  */ 			$('#distance').css("background-color","rgb(64, 214, 148)");
-/* 34  */ 		}
-/* 35  */ 	});
-/* 36  */ }
-/* 37  */ 
-/* 38  */ function getActivityData(){
-/* 39  */ 	var params = {probe:"activityprobe"};
-/* 40  */ 
-/* 41  */ 	makeAPICall('POST','hello','getdata',params,function(res){
-/* 42  */ 		
-/* 43  */ 		var data = JSON.parse(res);
-/* 44  */ 		var data_array = [];
-/* 45  */ 		var timestamp_array = [];
-/* 46  */ 
-/* 47  */ 		//console.log(data);
+/* 16  */ 	var params = {probe:"locationprobe"};
+/* 17  */ 
+/* 18  */ 	makeAPICall('POST','hello','getdata',params,function(res){
+/* 19  */ 
+/* 20  */ 		var xy = JSON.parse(res);
+/* 21  */ 
+/* 22  */ 		//console.log(xy[xy.length-1]);
+/* 23  */ 
+/* 24  */ 		current_lat = xy[xy.length-1].lat;
+/* 25  */ 		current_lng = xy[xy.length-1].lng;
+/* 26  */ 
+/* 27  */ 		if(MyMarker) MyMarker.setMap(null);
+/* 28  */ 		MyMarker = new google.maps.Marker({
+/* 29  */ 		    position:new google.maps.LatLng(current_lat,current_lng),
+/* 30  */ 		    animation:google.maps.Animation.BOUNCE
+/* 31  */ 		});
+/* 32  */ 		MyMarker.setMap(map);
+/* 33  */ 
+/* 34  */ 		var distance = getDistance();
+/* 35  */ 
+/* 36  */ 		$('#distance').empty();
+/* 37  */ 		$('#distance').append("Distance from Home: "+distance+"m");
+/* 38  */ 
+/* 39  */ 		if(distance > range_limit){
+/* 40  */ 			//alert owner
+/* 41  */ 			$('#distance').css("background-color","red");
+/* 42  */ 
+/* 43  */ 		}else{
+/* 44  */ 			$('#distance').css("background-color","rgb(64, 214, 148)");
+/* 45  */ 		}
+/* 46  */ 	});
+/* 47  */ }
 /* 48  */ 
-/* 49  */ 		for(var index = 0; index < data.length; index++){
-/* 50  */ 			data_array.push(parseInt(data[index].TOTAL_INTERVALS));
+/* 49  */ function getActivityData(){
+/* 50  */ 	var params = {probe:"activityprobe"};
 
 /* common.js */
 
 /* 51  */ 
-/* 52  */ 			var timestamp = data[index].timestamp;
-/* 53  */ 			timestamp = timestamp.replace("T","<br>");
-/* 54  */ 
-/* 55  */ 			timestamp_array.push(timestamp);
-/* 56  */ 		}
-/* 57  */ 
-/* 58  */ 		chartInit(data_array,timestamp_array);
-/* 59  */ 	});
-/* 60  */ }
+/* 52  */ 	makeAPICall('POST','hello','getdata',params,function(res){
+/* 53  */ 		
+/* 54  */ 		var data = JSON.parse(res);
+/* 55  */ 		var data_array = [];
+/* 56  */ 		var timestamp_array = [];
+/* 57  */ 		var ref_level = 15;
+/* 58  */ 		var ref_array = [];
+/* 59  */ 
+/* 60  */ 		//console.log(data);
 /* 61  */ 
-/* 62  */ function getDistance(){
-/* 63  */ 	return google.maps.geometry.spherical.computeDistanceBetween(MyMarker.getPosition(), HomeMarker.getPosition());
-/* 64  */ }
-/* 65  */ 
-/* 66  */ function isNumber(n) {
-/* 67  */   	return !isNaN(parseFloat(n)) && isFinite(n);
-/* 68  */ }
+/* 62  */ 		for(var index = 0; index < data.length; index++){
+/* 63  */ 			data_array.push(parseInt(data[index].TOTAL_INTERVALS));
+/* 64  */ 
+/* 65  */ 			var timestamp = data[index].timestamp;
+/* 66  */ 			timestamp = timestamp.replace("T","<br>");
+/* 67  */ 
+/* 68  */ 			timestamp_array.push(timestamp);
 /* 69  */ 
-/* 70  */ function chartInit(arr_data,arr_axis){
-/* 71  */ 	var chart1 = new Highcharts.Chart({
-/* 72  */         chart: {
-/* 73  */             renderTo: 'mygraph',
-/* 74  */             type: 'line'
-/* 75  */         },
-/* 76  */         title: {
-/* 77  */             text: 'Activity Graph'
-/* 78  */         },
-/* 79  */         xAxis: {
-/* 80  */             categories: arr_axis
-/* 81  */         },
-/* 82  */         yAxis: {
-/* 83  */             title: {
-/* 84  */                 text: 'Active Level'
-/* 85  */             }
-/* 86  */         },
-/* 87  */         series: [{
-/* 88  */             name: 'User',
-/* 89  */             data: arr_data
-/* 90  */         }]
-/* 91  */     });
-/* 92  */ }
-/* 93  */ 
-/* 94  */ function getXAxis(length, unit){
+/* 70  */ 			ref_array.push(ref_level);
+/* 71  */ 		}
+/* 72  */ 
+/* 73  */ 		activityChartInit(data_array,timestamp_array,ref_array);
+/* 74  */ 	});
+/* 75  */ }
+/* 76  */ 
+/* 77  */ function getAccelData(){
+/* 78  */ 
+/* 79  */ 	var params = {probe:"accelerometersensorprobe"};
+/* 80  */ 
+/* 81  */ 	makeAPICall('POST','hello','getdata',params,function(res){
+/* 82  */ 		
+/* 83  */ 		var data = JSON.parse(res);
+/* 84  */ 		var X = [];
+/* 85  */ 		var Y = [];
+/* 86  */ 		var Z = [];
+/* 87  */ 		var timestamp_array = [];
+/* 88  */ 
+/* 89  */ 		//console.log(data);
+/* 90  */ 
+/* 91  */ 		for(var index = 0; index < data.length; index++){
+/* 92  */ 			X.push(parseInt(data[index].X));
+/* 93  */ 			Y.push(parseInt(data[index].Y));
+/* 94  */ 			Z.push(parseInt(data[index].Z));
 /* 95  */ 
-/* 96  */ 	var axis_vals = [];
-/* 97  */ 
-/* 98  */ 	for(var count = 0; count < (length-1); count++){
-/* 99  */ 		axis_vals.push(length-(count+1)+unit);
-/* 100 */ 	}
+/* 96  */ 			var timestamp = data[index].timestamp;
+/* 97  */ 			timestamp = timestamp.replace("T","<br>");
+/* 98  */ 
+/* 99  */ 			timestamp_array.push(timestamp);
+/* 100 */ 
 
 /* common.js */
 
-/* 101 */ 
-/* 102 */ 	axis_vals[length-1] = "now";
-/* 103 */ 
-/* 104 */ 	return axis_vals;
-/* 105 */ }
+/* 101 */ 		}
+/* 102 */ 
+/* 103 */ 		accelChartInit(X,Y,Z,timestamp_array);
+/* 104 */ 
+/* 105 */ 	});
+/* 106 */ 
+/* 107 */ }
+/* 108 */ 
+/* 109 */ function getCallData(){
+/* 110 */ 
+/* 111 */ 	var params = {probe:"calllogprobe"};
+/* 112 */ 
+/* 113 */ 	makeAPICall('POST','hello','getdata',params,function(res){
+/* 114 */ 		
+/* 115 */ 		var data = JSON.parse(res);
+/* 116 */ 		var date = new Date(parseInt(data[data.length-1]["date"]));
+/* 117 */ 
+/* 118 */ 		$("#call").empty();
+/* 119 */ 		$("#call").append(date);
+/* 120 */ 
+/* 121 */ 	});
+/* 122 */ }
+/* 123 */ 
+/* 124 */ function getSMSData(){
+/* 125 */ 
+/* 126 */ 	var params = {probe:"smsprobe"};
+/* 127 */ 
+/* 128 */ 	makeAPICall('POST','hello','getdata',params,function(res){
+/* 129 */ 		
+/* 130 */ 		var data = JSON.parse(res);
+/* 131 */ 		var date = new Date(parseInt(data[data.length-1]["date"]));
+/* 132 */ 
+/* 133 */ 		$("#text").empty();
+/* 134 */ 		$("#text").append(date);
+/* 135 */ 
+/* 136 */ 	});
+/* 137 */ }
+/* 138 */ 
+/* 139 */ function resetHome(center){
+/* 140 */ 
+/* 141 */ 	if(HomeMarker) HomeMarker.setMap(null);
+/* 142 */ 
+/* 143 */     HomeMarker = new google.maps.Marker({
+/* 144 */         position:center,
+/* 145 */         icon: "https://maps.google.com/mapfiles/kml/shapes/schools_maps.png"
+/* 146 */     });
+/* 147 */ 
+/* 148 */     HomeMarker.setMap(map);
+/* 149 */ 
+/* 150 */     google.maps.event.addListener(HomeMarker,'click',function(event){
+
+/* common.js */
+
+/* 151 */ 
+/* 152 */         var infowindow = new google.maps.InfoWindow({
+/* 153 */             content: HomeMarker.getPosition().toString()
+/* 154 */         });
+/* 155 */ 
+/* 156 */         infowindow.open(map,HomeMarker);
+/* 157 */ 
+/* 158 */     });
+/* 159 */ 
+/* 160 */ }
+/* 161 */ 
+/* 162 */ function getDistance(){
+/* 163 */ 	return google.maps.geometry.spherical.computeDistanceBetween(MyMarker.getPosition(), HomeMarker.getPosition());
+/* 164 */ }
+/* 165 */ 
+/* 166 */ function isNumber(n) {
+/* 167 */   	return !isNaN(parseFloat(n)) && isFinite(n);
+/* 168 */ }
+/* 169 */ 
+/* 170 */ function activityChartInit(arr_data,arr_axis,arr_ref){
+/* 171 */ 
+/* 172 */ 
+/* 173 */ 	var chart1 = new Highcharts.Chart({
+/* 174 */         chart: {
+/* 175 */             renderTo: 'activitygraph',
+/* 176 */             type: 'line'
+/* 177 */         },
+/* 178 */         title: {
+/* 179 */             text: 'Activity Graph'
+/* 180 */         },
+/* 181 */         xAxis: {
+/* 182 */             categories: arr_axis
+/* 183 */         },
+/* 184 */         yAxis: {
+/* 185 */             title: {
+/* 186 */                 text: 'Active Level'
+/* 187 */             }
+/* 188 */         },
+/* 189 */         series: [{
+/* 190 */             name: 'User',
+/* 191 */             data: arr_data
+/* 192 */         },{
+/* 193 */         	name: 'Ref Level',
+/* 194 */         	data: arr_ref
+/* 195 */         }]
+/* 196 */     });
+/* 197 */ }
+/* 198 */ 
+/* 199 */ function accelChartInit(X,Y,Z,arr_axis){
+/* 200 */ 
+
+/* common.js */
+
+/* 201 */ 	var chart1 = new Highcharts.Chart({
+/* 202 */         chart: {
+/* 203 */             renderTo: 'accelgraph',
+/* 204 */             type: 'line'
+/* 205 */         },
+/* 206 */         title: {
+/* 207 */             text: 'Accelerometer Graph'
+/* 208 */         },
+/* 209 */         xAxis: {
+/* 210 */             categories: arr_axis
+/* 211 */         },
+/* 212 */         yAxis: {
+/* 213 */             title: {
+/* 214 */                 text: 'Acceleration'
+/* 215 */             }
+/* 216 */         },
+/* 217 */         series: [{
+/* 218 */             name: 'X',
+/* 219 */             data: X
+/* 220 */         },{
+/* 221 */         	name: 'Y',
+/* 222 */         	data: Y
+/* 223 */         },{
+/* 224 */         	name: 'Z',
+/* 225 */         	data: Z
+/* 226 */         }]
+/* 227 */     });
+/* 228 */ }
+/* 229 */ 
+/* 230 */ function getXAxis(length, unit){
+/* 231 */ 
+/* 232 */ 	var axis_vals = [];
+/* 233 */ 
+/* 234 */ 	for(var count = 0; count < (length-1); count++){
+/* 235 */ 		axis_vals.push(length-(count+1)+unit);
+/* 236 */ 	}
+/* 237 */ 
+/* 238 */ 	axis_vals[length-1] = "now";
+/* 239 */ 
+/* 240 */ 	return axis_vals;
+/* 241 */ }
 
 ;
 /* common.js */

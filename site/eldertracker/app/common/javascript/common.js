@@ -1,4 +1,15 @@
 var range_limit = 40;
+var map;
+
+function initialize(center)
+{
+  var mapProp = {
+    center:center,
+    zoom:15,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
 
 function getLocationData(){
 
@@ -43,6 +54,8 @@ function getActivityData(){
 		var data = JSON.parse(res);
 		var data_array = [];
 		var timestamp_array = [];
+		var ref_level = 15;
+		var ref_array = [];
 
 		//console.log(data);
 
@@ -53,10 +66,97 @@ function getActivityData(){
 			timestamp = timestamp.replace("T","<br>");
 
 			timestamp_array.push(timestamp);
+
+			ref_array.push(ref_level);
 		}
 
-		chartInit(data_array,timestamp_array);
+		activityChartInit(data_array,timestamp_array,ref_array);
 	});
+}
+
+function getAccelData(){
+
+	var params = {probe:"accelerometersensorprobe"};
+
+	makeAPICall('POST','hello','getdata',params,function(res){
+		
+		var data = JSON.parse(res);
+		var X = [];
+		var Y = [];
+		var Z = [];
+		var timestamp_array = [];
+
+		//console.log(data);
+
+		for(var index = 0; index < data.length; index++){
+			X.push(parseInt(data[index].X));
+			Y.push(parseInt(data[index].Y));
+			Z.push(parseInt(data[index].Z));
+
+			var timestamp = data[index].timestamp;
+			timestamp = timestamp.replace("T","<br>");
+
+			timestamp_array.push(timestamp);
+
+		}
+
+		accelChartInit(X,Y,Z,timestamp_array);
+
+	});
+
+}
+
+function getCallData(){
+
+	var params = {probe:"calllogprobe"};
+
+	makeAPICall('POST','hello','getdata',params,function(res){
+		
+		var data = JSON.parse(res);
+		var date = new Date(parseInt(data[data.length-1]["date"]));
+
+		$("#call").empty();
+		$("#call").append(date);
+
+	});
+}
+
+function getSMSData(){
+
+	var params = {probe:"smsprobe"};
+
+	makeAPICall('POST','hello','getdata',params,function(res){
+		
+		var data = JSON.parse(res);
+		var date = new Date(parseInt(data[data.length-1]["date"]));
+
+		$("#text").empty();
+		$("#text").append(date);
+
+	});
+}
+
+function resetHome(center){
+
+	if(HomeMarker) HomeMarker.setMap(null);
+
+    HomeMarker = new google.maps.Marker({
+        position:center,
+        icon: "https://maps.google.com/mapfiles/kml/shapes/schools_maps.png"
+    });
+
+    HomeMarker.setMap(map);
+
+    google.maps.event.addListener(HomeMarker,'click',function(event){
+
+        var infowindow = new google.maps.InfoWindow({
+            content: HomeMarker.getPosition().toString()
+        });
+
+        infowindow.open(map,HomeMarker);
+
+    });
+
 }
 
 function getDistance(){
@@ -67,10 +167,12 @@ function isNumber(n) {
   	return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
-function chartInit(arr_data,arr_axis){
+function activityChartInit(arr_data,arr_axis,arr_ref){
+
+
 	var chart1 = new Highcharts.Chart({
         chart: {
-            renderTo: 'mygraph',
+            renderTo: 'activitygraph',
             type: 'line'
         },
         title: {
@@ -87,6 +189,40 @@ function chartInit(arr_data,arr_axis){
         series: [{
             name: 'User',
             data: arr_data
+        },{
+        	name: 'Ref Level',
+        	data: arr_ref
+        }]
+    });
+}
+
+function accelChartInit(X,Y,Z,arr_axis){
+
+	var chart1 = new Highcharts.Chart({
+        chart: {
+            renderTo: 'accelgraph',
+            type: 'line'
+        },
+        title: {
+            text: 'Accelerometer Graph'
+        },
+        xAxis: {
+            categories: arr_axis
+        },
+        yAxis: {
+            title: {
+                text: 'Acceleration'
+            }
+        },
+        series: [{
+            name: 'X',
+            data: X
+        },{
+        	name: 'Y',
+        	data: Y
+        },{
+        	name: 'Z',
+        	data: Z
         }]
     });
 }

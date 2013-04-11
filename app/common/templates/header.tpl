@@ -142,17 +142,7 @@
 
     <script>
     
-    var map;
-
-    function initialize(center)
-    {
-      var mapProp = {
-        center:center,
-        zoom:20,
-        mapTypeId:google.maps.MapTypeId.ROADMAP
-      };
-      map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
+    
 
     //google.maps.event.addDomListener(window, 'load', initialize);
     </script>

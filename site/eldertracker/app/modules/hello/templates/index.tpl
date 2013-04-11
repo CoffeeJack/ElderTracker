@@ -3,14 +3,38 @@
 <!-- <h1 class="focal">{$message}</h1> -->
 <h1 id="distance"></h1>
 <div class="row">
-<div id="googleMap" class="span6" style="width:500px;height:380px;"></div>
-<p><input id="home_lat" type="text" placeholder="Home Latitude">Home Latitude
+    <div id="googleMap" class="span6" style="width:500px;height:380px;"></div>
+<!-- <p><input id="home_lat" type="text" placeholder="Home Latitude">Home Latitude
 <p><input id="home_lng" type="text" placeholder="Home Longitude">Home Longitude
-<p><button id="save">Save Above</button><button id="use_current">Use Current</button>
+<p><button id="save">Save Above</button><button id="use_current">Use Current</button> -->
+    <div class="span3">
+    <h3> Useful Tips: </h3>
+        <ul>
+            <li>1) Click anywhere on Map to set Home
+            <li>2) Bar on top shows distance between you and Home
+        </ul>
+    <button class="btn btn-success">Find Home</button>
+    <button class="btn btn-danger">Find Me</button>
+    </div>
+
+    <div id="call_and_sms" class="span3">
+        <h4>Last Call @ 
+        </h4>   
+        <div id="call">
+        </div>
+        <br>
+        <h4>Last Text @ 
+        </h4>   
+        <div id="text">
+        </div>
+        
+    </div>
 </div>	
 
-<div id="mygraph" style="width:100%; height:400px;"></div>
-<p><button id="getdata">TEST</button>
+<div id="activitygraph" style="width:100%; height:400px;"></div>
+<div id="accelgraph" style="width:100%; height:400px;"></div>
+
+<!-- <p><button id="getdata">TEST</button> -->
 
 
 <script>
@@ -36,6 +60,9 @@ $(document).on("ready",function(event){
     HomeMarker.setMap(map);
     getLocationData();
     getActivityData();
+    getAccelData();
+    getCallData();
+    getSMSData();
 
     if(home_lat){
     	$('#home_lat').attr("value",home_lat);
@@ -54,14 +81,8 @@ $(document).on("ready",function(event){
 		if(isNumber(new_lng)) home_lng = new_lng; 
 
     	myCenter = new google.maps.LatLng(home_lat,home_lng); //home
-    	initialize(myCenter);
 
-    	HomeMarker = new google.maps.Marker({
-		    position:myCenter,
-		    icon: "https://maps.google.com/mapfiles/kml/shapes/schools_maps.png"
-		});
-
-		HomeMarker.setMap(map);
+    	resetHome(myCenter);
 
 		getLocationData();
     });
@@ -72,30 +93,56 @@ $(document).on("ready",function(event){
     	home_lng = current_lng;
 
     	myCenter = new google.maps.LatLng(home_lat,home_lng); //home
-    	initialize(myCenter);
-
-    	HomeMarker = new google.maps.Marker({
-		    position:myCenter,
-		    icon: "https://maps.google.com/mapfiles/kml/shapes/schools_maps.png"
-		});
-
-		HomeMarker.setMap(map);
+    	resetHome(myCenter);
 
 		getLocationData();
+    });
+
+    google.maps.event.addListener(map,'click',function(event) {
+
+        resetHome(event.latLng);
+
+        getLocationData();
+    });
+
+    google.maps.event.addListener(HomeMarker,'click',function(event){
+
+        var infowindow = new google.maps.InfoWindow({
+            content: HomeMarker.getPosition().toString()
+        });
+
+        infowindow.open(map,HomeMarker);
+
+    });
+
+    $('.btn-danger').click(function(event){
+
+        map.panTo(MyMarker.getPosition());
+    });
+
+    $('.btn-success').click(function(event){
+
+        map.panTo(HomeMarker.getPosition());
     });
 
     //timer to poll data
     setInterval(function(){
     	getLocationData();
     	getActivityData();
+        getCallData();
+        getSMSData();
     },30000);
+
+    setInterval(function(){
+        getAccelData();
+    },3000);
 
     $('#getdata').click(function(event){
     	//getActivityData();
     	var params = {};
-    	makeAPICall('POST','hello','sendemail',params,function(res){
-    		console.log(res);
-    	});
+    	// makeAPICall('POST','hello','sendemail',params,function(res){
+    	// 	console.log(res);
+    	// });      
     });
 
 });
