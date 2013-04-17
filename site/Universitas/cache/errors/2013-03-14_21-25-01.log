@@ -1,9 +1,0 @@
-<strong>Controller class  not defined</strong><br><br><strong>Fatal error</strong>:  Uncaught exception 'KurogoConfigurationException' with message 'Controller class  not defined' in C:\xampp\htdocs\Kurogo\lib\People\PeopleController.php:105
-Stack trace:
-#0 C:\xampp\htdocs\Kurogo\app\modules\people\PeopleWebModule.php(214): factory(NULL, array)
-#1 C:\xampp\htdocs\Kurogo\app\modules\people\PeopleWebModule.php(323): getFeed(string)
-#2 C:\xampp\htdocs\Kurogo\lib\WebModule.php(1709): initializeForPage()
-#3 C:\xampp\htdocs\Kurogo\lib\WebModule.php(1875): setPageVariables()
-#4 C:\xampp\htdocs\Kurogo\www\index.php(306): displayPage()
-#5 {main}
-  thrown in <strong>C:\xampp\htdocs\Kurogo\lib\People\PeopleController.php</strong> on line <strong>105</strong>
