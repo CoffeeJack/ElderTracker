@@ -140,9 +140,9 @@ $(document).on("ready",function(event){
     $('#getdata').click(function(event){
     	//getActivityData();
     	var params = {};
-    	// makeAPICall('POST','hello','sendemail',params,function(res){
-    	// 	console.log(res);
-    	// });      
+    	makeAPICall('POST','hello','sendemail',params,function(res){
+    		console.log(res);
+    	});      
     });
 
 });

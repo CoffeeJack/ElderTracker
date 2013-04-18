@@ -113,7 +113,13 @@ function getCallData(){
 	makeAPICall('POST','hello','getdata',params,function(res){
 		
 		var data = JSON.parse(res);
-		var date = new Date(parseInt(data[data.length-1]["date"]));
+		var index = data.length-1;
+
+		while(isNaN(data[index]["date"])){
+			index--;
+		}
+
+		var date = new Date(parseInt(data[index]["date"]));
 
 		$("#call").empty();
 		$("#call").append(date);
@@ -128,7 +134,13 @@ function getSMSData(){
 	makeAPICall('POST','hello','getdata',params,function(res){
 		
 		var data = JSON.parse(res);
-		var date = new Date(parseInt(data[data.length-1]["date"]));
+		var index = data.length-1;
+
+		while(isNaN(data[index]["date"])){
+			index--;
+		}
+		
+		var date = new Date(parseInt(data[index]["date"]));
 
 		$("#text").empty();
 		$("#text").append(date);
